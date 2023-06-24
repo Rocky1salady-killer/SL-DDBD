@@ -47,7 +47,7 @@ cd ..
 export MASTER_ADDR=localhost
 export MASTER_PORT=5678
 ```
-
+This work used the State Farm dataset which can be downloaded from this [Kaggle competition](https://www.kaggle.com/c/state-farm-distracted-driver-detection).
 ## Train
 
  The training continues by using a pretrained model from our work, an example is:
