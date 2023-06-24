@@ -1,0 +1,10 @@
+torchvision==0.8.2 
+torchaudio==0.7.2 
+timm==0.4.9 
+opencv-python==4.4.0.46
+ termcolor==1.1.0 
+yacs==0.1.8 
+diffdist  
+pyyaml
+scipy
+termcolor
