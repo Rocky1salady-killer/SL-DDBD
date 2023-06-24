@@ -34,7 +34,7 @@ To investigate the advancement of self-supervised learning based on masked image
 
 | name | pre-train epochs | pre-train resolution | fine-tune resolution | acc@1 | pre-trained model |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| MIM-Large | 800 | 224x224 | 224x224 | 85.4 | [google](https://drive.google.com/file/d/1DCELfGormJK0xbMU2A-mvBWZStSbDUfd/view?usp=sharing)/[config](configs/MIM_finetune__swin_large__img224_window14__800ep.yaml) | 
+| SwinMIM-Large | 800 | 224x224 | 224x224 | 85.4 | [google](https://drive.google.com/file/d/1DCELfGormJK0xbMU2A-mvBWZStSbDUfd/view?usp=sharing)/[config](configs/MIM_finetune__swin_large__img224_window14__800ep.yaml) | 
 ### Installation
 
  The requirements are listed in the `requirement.txt` file. To create your own environment, an example is:
