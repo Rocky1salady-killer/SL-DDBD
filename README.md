@@ -24,6 +24,10 @@ To investigate the advancement of self-supervised learning based on masked image
 
 ![vss](vss.jpg)
 
+
+| name | pre-train epochs | resolution on state farm | fine-tune resolution | acc@1 | pre-trained model |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| SL-DDBD_base_patchsize32-ratio0.5 | 110 | 224x224 | 224x224 | 84.92 | [google](https://drive.google.com/file/d/1Cy7XrFERX-2W6I9hS7r2WGZoiG0b3e49/view?usp=sharing)/[config](configs/SLDDBD_patchsize32_swin_ratio0.5_img224_statefarm_110ep.yaml) |
 ### Installation
 
  The requirements are listed in the `requirement.txt` file. To create your own environment, an example is:
