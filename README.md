@@ -13,12 +13,17 @@ In this work, we proposed a novel method for driver distraction behavior detecti
 More detailed can be found in our [arxiv](https://arxiv.org/ftp/arxiv/papers/2306/2306.00543.pdf) paper.
 
 ### Main Results on State Farm
-![acdm](acdm.png)
 
-Visualization of the results on the test set. This includes model using ViT as encoder, baseline model, improved model and the best model of our work.
+In this work, four models were compared for their performance over different epochs. Improved+DA exhibited the fastest convergence and the highest accuracy at each epoch, achieving 78% accuracy by the 10th epoch and a final accuracy of 99.60%. Conversely, the ViT model, despite fast convergence, only managed a final accuracy of 74.35%. The Improved model consistently surpassed the baseline, underscoring the benefits of optimization.
+
+<div align="center">
+    <img src="figures/teaser.jpg" height="500px" />
+</div>
+
+To investigate the advancement of self-supervised learning based on masked image modeling, we visualize the self-supervised learning model and the supervised learning model.The self-supervised model's attention is focused on the key parts of the scene objects and has a better grasp of the feature information, avoiding the problem of feature redundancy and excessive computational costs.
 
 ![vss](vss.jpg)
-To investigate the advancement of self-supervised learning based on masked image modeling, we visualize the self-supervised learning model and the supervised learning model.
+
 ### Installation
 
  The requirements are listed in the `requirement.txt` file. To create your own environment, an example is:
