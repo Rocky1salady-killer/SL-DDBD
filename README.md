@@ -12,7 +12,7 @@ In this work, we proposed a novel method for driver distraction behavior detecti
 
 More detailed can be found in our [arxiv](https://arxiv.org/ftp/arxiv/papers/2306/2306.00543.pdf) paper.
 
-### Main Results on State Farm
+### Main Results
 
 In this work, four models were compared for their performance over different epochs. Improved+DA exhibited the fastest convergence and the highest accuracy at each epoch, achieving 78% accuracy by the 10th epoch and a final accuracy of 99.60%. Conversely, the ViT model, despite fast convergence, only managed a final accuracy of 74.35%. The Improved model consistently surpassed the baseline, underscoring the benefits of optimization.
 
@@ -24,14 +24,17 @@ To investigate the advancement of self-supervised learning based on masked image
 
 ![vss](vss.jpg)
 
+#### State Farm Pre-trained Model
 
-| name | pre-train epochs | resolution on state farm | fine-tune resolution | acc@1 | pre-trained model |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| SL-DDBD_base_patchsize32-ratio0.5 | 110 | 224x224 | 224x224 | 84.92 | [google](https://drive.google.com/file/d/1Cy7XrFERX-2W6I9hS7r2WGZoiG0b3e49/view?usp=sharing)/[config](configs/SLDDBD_patchsize32_swin_ratio0.5_img224_statefarm_110ep.yaml) |
+| name | pre-train epochs | pre-train resolution | fine-tune resolution | acc@1 | pre-trained model |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| SLDDBD-Base | 110 | 224x224 | 224x224 | 84.92 | [google](https://drive.google.com/file/d/1Cy7XrFERX-2W6I9hS7r2WGZoiG0b3e49/view?usp=sharing)/[config](configs/SL-DDBD_patch_size32_ratio_0.5_110ep_for_staefarm.yaml) | 
 
-| name | pre-train epochs | pre-train resolution | fine-tune resolution | acc@1 | pre-trained model | fine-tuned model |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| ViT-Base | 800 | 224x224 | 224x224 | 83.8 | [google](https://drive.google.com/file/d/1dJn6GYkwMIcoP3zqOEyW1_iQfpBi8UOw/view?usp=sharing)/[config](configs/vit_base__800ep/simmim_pretrain__vit_base__img224__800ep.yaml) | [google](https://drive.google.com/file/d/1fKgDYd0tRgyHyTnyB1CleYxjo0Gn5tEB/view?usp=sharing)/[config](configs/vit_base__800ep/simmim_finetune__vit_base__img224__800ep.yaml) |
+#### ImageNet-1K Pre-trained Model
+
+| name | pre-train epochs | pre-train resolution | fine-tune resolution | acc@1 | pre-trained model |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| MIM-Large | 800 | 224x224 | 224x224 | 85.4 | [google](https://drive.google.com/file/d/1DCELfGormJK0xbMU2A-mvBWZStSbDUfd/view?usp=sharing)/[config](configs/MIM_finetune__swin_large__img224_window14__800ep.yaml) | 
 ### Installation
 
  The requirements are listed in the `requirement.txt` file. To create your own environment, an example is:
