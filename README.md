@@ -83,7 +83,7 @@ python inference.py --cfg configs/SLDDBD_patchsize32_swin_ratio0.5_img224_statef
 ```
 You can modify the inference code to customize the inference categories and data input path.
 
-### Citation
+## Citation
 
 If you are interested in this work, please cite the following work:
 
@@ -96,7 +96,7 @@ If you are interested in this work, please cite the following work:
 }
 ```
 
-### Acknowledgments
+## Acknowledgments
 
-Our work is based on [Swin Transformer](https://github.com/microsoft/Swin-Transformer) and we use their code.  We appreciate the previous open-source repository [Swin Transformer](https://github.com/microsoft/Swin-Transformer).
+Our work is based on [Swin Transformer](https://github.com/microsoft/Swin-Transformer).  We appreciate the previous open-source repository [Swin Transformer](https://github.com/microsoft/Swin-Transformer).
 
