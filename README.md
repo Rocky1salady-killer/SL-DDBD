@@ -6,13 +6,13 @@
 
 ![pipeline](pipeline.png)
 
-### Introduction
+## Introduction
 
 In this work, we proposed a novel method for driver distraction behavior detection, termed as **SL-DDBD**. Self-supervised learning framework for masked image modeling. The structure-improved swin transformer was used as an encoder. Extended SF3 dataset using multiple methods of data augmentation strategies. Selected the best masking strategy.
 
 More detailed can be found in our [arxiv](https://arxiv.org/ftp/arxiv/papers/2306/2306.00543.pdf) paper.
 
-### Main Results
+## Main Results
 
 In this work, four models were compared for their performance over different epochs. Improved+DA exhibited the fastest convergence and the highest accuracy at each epoch, achieving 78% accuracy by the 10th epoch and a final accuracy of 99.60%. Conversely, the ViT model, despite fast convergence, only managed a final accuracy of 74.35%. The Improved model consistently surpassed the baseline, underscoring the benefits of optimization.
 
@@ -24,18 +24,18 @@ To investigate the advancement of self-supervised learning based on masked image
 
 ![vss](vss.jpg)
 
-#### State Farm Pre-trained Model
+### State Farm Pre-trained Model
 
 | name | pre-train epochs | pre-train resolution | fine-tune resolution | acc@1 | pre-trained model |
 | :---: | :---: | :---: | :---: | :---: | :---: |
 | SLDDBD-Base | 110 | 224x224 | 224x224 | 84.92 | [google](https://drive.google.com/file/d/1Cy7XrFERX-2W6I9hS7r2WGZoiG0b3e49/view?usp=sharing)/[config](configs/SLDDBD_patchsize32_swin_ratio0.5_img224_statefarm_110ep.yaml) | 
 
-#### ImageNet-1K Pre-trained Model
+### ImageNet-1K Pre-trained Model
 
 | name | pre-train epochs | pre-train resolution | fine-tune resolution | acc@1 | pre-trained model |
 | :---: | :---: | :---: | :---: | :---: | :---: |
 | SwinMIM-Large | 800 | 224x224 | 224x224 | 85.4 | [google](https://drive.google.com/file/d/1DCELfGormJK0xbMU2A-mvBWZStSbDUfd/view?usp=sharing)/[config](configs/MIM_finetune__swin_large__img224_window14__800ep.yaml) | 
-### Installation
+## Installation
 
  The requirements are listed in the `requirement.txt` file. To create your own environment, an example is:
 
@@ -48,7 +48,7 @@ export MASTER_ADDR=localhost
 export MASTER_PORT=5678
 ```
 
-### Train
+## Train
 
  The training continues by using a pretrained model from our work, an example is:
 
@@ -62,7 +62,7 @@ python main.py  --cfg configs/MIM_finetune__swin_large__img224_window14__800ep.y
 ```
 
 
-### Evaluation
+## Evaluation
 
 The evaluation configurations can be adjusted at `main_eval.py`.
 Get the confusion matrix results you need in the confusion matrix folder.
@@ -72,7 +72,7 @@ cd eval
 python main_eval.py --eval  --cfg configs/SLDDBD_patchsize32_swin_ratio0.5_img224_statefarm_110ep.yaml  --resume ./SLDDBD_patchsize32_swin_ratio0.5_img224_statefarm_110ep.pth --local_rank 0 --data-path  dataset
 ```
 
-### Inference
+## Inference
 
 Print the detection results of the weights model and output the txt file.
 
