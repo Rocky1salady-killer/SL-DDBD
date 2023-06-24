@@ -28,7 +28,7 @@ To investigate the advancement of self-supervised learning based on masked image
 
 | name | pre-train epochs | pre-train resolution | fine-tune resolution | acc@1 | pre-trained model |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| SLDDBD-Base | 110 | 224x224 | 224x224 | 84.92 | [google](https://drive.google.com/file/d/1Cy7XrFERX-2W6I9hS7r2WGZoiG0b3e49/view?usp=sharing)/[config](configs/configs/SLDDBD_patchsize32_swin_ratio0.5_img224_statefarm_110ep.yaml) | 
+| SLDDBD-Base | 110 | 224x224 | 224x224 | 84.92 | [google](https://drive.google.com/file/d/1Cy7XrFERX-2W6I9hS7r2WGZoiG0b3e49/view?usp=sharing)/[config](configs/SLDDBD_patchsize32_swin_ratio0.5_img224_statefarm_110ep.yaml) | 
 
 #### ImageNet-1K Pre-trained Model
 
