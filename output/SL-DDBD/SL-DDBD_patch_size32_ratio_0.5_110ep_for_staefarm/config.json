@@ -1,0 +1,106 @@
+AMP_OPT_LEVEL: O1
+AUG:
+  AUTO_AUGMENT: rand-m9-mstd0.5-inc1
+  COLOR_JITTER: 0.4
+  CUTMIX: 1.0
+  CUTMIX_MINMAX: null
+  MIXUP: 0.8
+  MIXUP_MODE: batch
+  MIXUP_PROB: 1.0
+  MIXUP_SWITCH_PROB: 0.5
+  RECOUNT: 1
+  REMODE: pixel
+  REPROB: 0.25
+BASE:
+- ''
+DATA:
+  BATCH_SIZE: 32
+  DATASET: imagenet
+  DATA_PATH: /home/featurize/data/dataset
+  IMG_SIZE: 224
+  INTERPOLATION: bicubic
+  MASK_PATCH_SIZE: 32
+  MASK_RATIO: 0.5
+  NUM_WORKERS: 8
+  PIN_MEMORY: true
+EVAL_MODE: false
+LOCAL_RANK: 0
+MODEL:
+  DROP_PATH_RATE: 0.1
+  DROP_RATE: 0.0
+  LABEL_SMOOTHING: 0.1
+  NAME: SL-DDBD
+  NUM_CLASSES: 10
+  PRETRAINED: ''
+  RESUME: MIM_finetune__swin_large__img224_window14__800ep.pth
+  SWIN:
+    APE: false
+    DEPTHS:
+    - 2
+    - 2
+    - 18
+    - 2
+    EMBED_DIM: 128
+    IN_CHANS: 3
+    MLP_RATIO: 4.0
+    NUM_HEADS:
+    - 4
+    - 8
+    - 16
+    - 32
+    PATCH_NORM: true
+    PATCH_SIZE: 4
+    QKV_BIAS: true
+    QK_SCALE: null
+    WINDOW_SIZE: 7
+  TYPE: swin
+  VIT:
+    DEPTH: 12
+    EMBED_DIM: 768
+    INIT_VALUES: 0.1
+    IN_CHANS: 3
+    MLP_RATIO: 4
+    NUM_HEADS: 12
+    PATCH_SIZE: 16
+    QKV_BIAS: true
+    USE_APE: false
+    USE_MEAN_POOLING: false
+    USE_RPB: false
+    USE_SHARED_RPB: true
+OUTPUT: output/SL-DDBD/SL-DDBD_patch_size32_ratio_0.5_110ep_for_staefarm
+PRETRAINED: SLDDBD_patchsize32_swin_ratio0.5_img224_statefarm_110ep.pth
+PRINT_FREQ: 100
+SAVE_FREQ: 5
+SEED: 0
+TAG: SL-DDBD_patch_size32_ratio_0.5_110ep_for_staefarm
+TEST:
+  CROP: true
+THROUGHPUT_MODE: false
+TRAIN:
+  ACCUMULATION_STEPS: 0
+  AUTO_RESUME: true
+  BASE_LR: 7.8125e-05
+  CLIP_GRAD: 5.0
+  EPOCHS: 110
+  LAYER_DECAY: 0.8
+  LR_SCHEDULER:
+    DECAY_EPOCHS: 30
+    DECAY_RATE: 0.1
+    GAMMA: 0.1
+    MULTISTEPS: []
+    NAME: cosine
+  MIN_LR: 1.5625e-08
+  OPTIMIZER:
+    BETAS:
+    - 0.9
+    - 0.999
+    EPS: 1.0e-08
+    MOMENTUM: 0.9
+    NAME: adamw
+  START_EPOCH: 0
+  USE_CHECKPOINT: false
+  WARMUP_EPOCHS: 20
+  WARMUP_LR: 1.5625e-08
+  WEIGHT_DECAY: 0.05
+TRAINING:
+  EPOCHSS: 110

@@ -1,0 +1,23 @@
+MODEL:
+  TYPE: swin
+  NAME: SL-DDBD
+  DROP_PATH_RATE: 0.1
+  SWIN:
+    EMBED_DIM: 128
+    DEPTHS: [ 2, 2, 18, 2 ]
+    NUM_HEADS: [ 4, 8, 16, 32 ]
+    WINDOW_SIZE: 7
+DATA:
+  IMG_SIZE: 224
+  NAME_CLASSES: ["c0", "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9"]
+TRAIN:
+  EPOCHS: 110
+  WARMUP_EPOCHS: 20
+  BASE_LR: 1.25e-3
+  WARMUP_LR: 2.5e-7
+  MIN_LR: 2.5e-7
+  WEIGHT_DECAY: 0.05
+  LAYER_DECAY: 0.8
+PRINT_FREQ: 100
+SAVE_FREQ: 5
+TAG: SL-DDBD_patch_size32_ratio_0.5_110ep_for_staefarm

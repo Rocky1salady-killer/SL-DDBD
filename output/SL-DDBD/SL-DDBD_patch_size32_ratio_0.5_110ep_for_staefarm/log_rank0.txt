@@ -1,0 +1,2098 @@
+[2023-06-23 22:45:56 SL-DDBD] (main_eval.py 417): INFO Full config saved to output/SL-DDBD/SL-DDBD_patch_size32_ratio_0.5_110ep_for_staefarm/config.json
+[2023-06-23 22:45:56 SL-DDBD] (main_eval.py 420): INFO AMP_OPT_LEVEL: ''
+AUG:
+  AUTO_AUGMENT: rand-m9-mstd0.5-inc1
+  COLOR_JITTER: 0.4
+  CUTMIX: 1.0
+  CUTMIX_MINMAX: null
+  MIXUP: 0.8
+  MIXUP_MODE: batch
+  MIXUP_PROB: 1.0
+  MIXUP_SWITCH_PROB: 0.5
+  RECOUNT: 1
+  REMODE: pixel
+  REPROB: 0.25
+BASE:
+- ''
+DATA:
+  BATCH_SIZE: 128
+  DATASET: imagenet
+  DATA_PATH: /home/featurize/data/dataset
+  IMG_SIZE: 224
+  INTERPOLATION: bicubic
+  MASK_PATCH_SIZE: 32
+  MASK_RATIO: 0.5
+  NUM_WORKERS: 8
+  PIN_MEMORY: true
+EVAL_MODE: true
+LOCAL_RANK: 0
+MODEL:
+  DROP_PATH_RATE: 0.1
+  DROP_RATE: 0.0
+  LABEL_SMOOTHING: 0.1
+  NAME: SL-DDBD
+  NUM_CLASSES: 10
+  PRETRAINED: ''
+  RESUME: MIM_finetune__swin_large__img224_window14__800ep.pth
+  SWIN:
+    APE: false
+    DEPTHS:
+    - 2
+    - 2
+    - 18
+    - 2
+    EMBED_DIM: 128
+    IN_CHANS: 3
+    MLP_RATIO: 4.0
+    NUM_HEADS:
+    - 4
+    - 8
+    - 16
+    - 32
+    PATCH_NORM: true
+    PATCH_SIZE: 4
+    QKV_BIAS: true
+    QK_SCALE: null
+    WINDOW_SIZE: 7
+  TYPE: swin
+  VIT:
+    DEPTH: 12
+    EMBED_DIM: 768
+    INIT_VALUES: 0.1
+    IN_CHANS: 3
+    MLP_RATIO: 4
+    NUM_HEADS: 12
+    PATCH_SIZE: 16
+    QKV_BIAS: true
+    USE_APE: false
+    USE_MEAN_POOLING: false
+    USE_RPB: false
+    USE_SHARED_RPB: true
+OUTPUT: output/SL-DDBD/SL-DDBD_patch_size32_ratio_0.5_110ep_for_staefarm
+PRETRAINED: ''
+PRINT_FREQ: 100
+SAVE_FREQ: 5
+SEED: 0
+TAG: SL-DDBD_patch_size32_ratio_0.5_110ep_for_staefarm
+TEST:
+  CROP: true
+THROUGHPUT_MODE: false
+TRAIN:
+  ACCUMULATION_STEPS: 0
+  AUTO_RESUME: true
+  BASE_LR: 0.0003125
+  CLIP_GRAD: 5.0
+  EPOCHS: 110
+  LAYER_DECAY: 0.8
+  LR_SCHEDULER:
+    DECAY_EPOCHS: 30
+    DECAY_RATE: 0.1
+    GAMMA: 0.1
+    MULTISTEPS: []
+    NAME: cosine
+  MIN_LR: 6.25e-08
+  OPTIMIZER:
+    BETAS:
+    - 0.9
+    - 0.999
+    EPS: 1.0e-08
+    MOMENTUM: 0.9
+    NAME: adamw
+  START_EPOCH: 0
+  USE_CHECKPOINT: false
+  WARMUP_EPOCHS: 20
+  WARMUP_LR: 6.25e-08
+  WEIGHT_DECAY: 0.05
+TRAINING:
+  EPOCHSS: 110
+
+[2023-06-24 13:28:31 SL-DDBD] (main_eval.py 417): INFO Full config saved to output/SL-DDBD/SL-DDBD_patch_size32_ratio_0.5_110ep_for_staefarm/config.json
+[2023-06-24 13:28:31 SL-DDBD] (main_eval.py 420): INFO AMP_OPT_LEVEL: ''
+AUG:
+  AUTO_AUGMENT: rand-m9-mstd0.5-inc1
+  COLOR_JITTER: 0.4
+  CUTMIX: 1.0
+  CUTMIX_MINMAX: null
+  MIXUP: 0.8
+  MIXUP_MODE: batch
+  MIXUP_PROB: 1.0
+  MIXUP_SWITCH_PROB: 0.5
+  RECOUNT: 1
+  REMODE: pixel
+  REPROB: 0.25
+BASE:
+- ''
+DATA:
+  BATCH_SIZE: 128
+  DATASET: imagenet
+  DATA_PATH: /home/featurize/data/dataset
+  IMG_SIZE: 224
+  INTERPOLATION: bicubic
+  MASK_PATCH_SIZE: 32
+  MASK_RATIO: 0.5
+  NUM_WORKERS: 8
+  PIN_MEMORY: true
+EVAL_MODE: true
+LOCAL_RANK: 0
+MODEL:
+  DROP_PATH_RATE: 0.1
+  DROP_RATE: 0.0
+  LABEL_SMOOTHING: 0.1
+  NAME: SL-DDBD
+  NUM_CLASSES: 10
+  PRETRAINED: ''
+  RESUME: MIM_finetune__swin_large__img224_window14__800ep.pth
+  SWIN:
+    APE: false
+    DEPTHS:
+    - 2
+    - 2
+    - 18
+    - 2
+    EMBED_DIM: 128
+    IN_CHANS: 3
+    MLP_RATIO: 4.0
+    NUM_HEADS:
+    - 4
+    - 8
+    - 16
+    - 32
+    PATCH_NORM: true
+    PATCH_SIZE: 4
+    QKV_BIAS: true
+    QK_SCALE: null
+    WINDOW_SIZE: 7
+  TYPE: swin
+  VIT:
+    DEPTH: 12
+    EMBED_DIM: 768
+    INIT_VALUES: 0.1
+    IN_CHANS: 3
+    MLP_RATIO: 4
+    NUM_HEADS: 12
+    PATCH_SIZE: 16
+    QKV_BIAS: true
+    USE_APE: false
+    USE_MEAN_POOLING: false
+    USE_RPB: false
+    USE_SHARED_RPB: true
+OUTPUT: output/SL-DDBD/SL-DDBD_patch_size32_ratio_0.5_110ep_for_staefarm
+PRETRAINED: ''
+PRINT_FREQ: 100
+SAVE_FREQ: 5
+SEED: 0
+TAG: SL-DDBD_patch_size32_ratio_0.5_110ep_for_staefarm
+TEST:
+  CROP: true
+THROUGHPUT_MODE: false
+TRAIN:
+  ACCUMULATION_STEPS: 0
+  AUTO_RESUME: true
+  BASE_LR: 0.0003125
+  CLIP_GRAD: 5.0
+  EPOCHS: 110
+  LAYER_DECAY: 0.8
+  LR_SCHEDULER:
+    DECAY_EPOCHS: 30
+    DECAY_RATE: 0.1
+    GAMMA: 0.1
+    MULTISTEPS: []
+    NAME: cosine
+  MIN_LR: 6.25e-08
+  OPTIMIZER:
+    BETAS:
+    - 0.9
+    - 0.999
+    EPS: 1.0e-08
+    MOMENTUM: 0.9
+    NAME: adamw
+  START_EPOCH: 0
+  USE_CHECKPOINT: false
+  WARMUP_EPOCHS: 20
+  WARMUP_LR: 6.25e-08
+  WEIGHT_DECAY: 0.05
+TRAINING:
+  EPOCHSS: 110
+
+[2023-06-24 15:04:52 SL-DDBD] (main.py 343): INFO Full config saved to output/SL-DDBD/SL-DDBD_patch_size32_ratio_0.5_110ep_for_staefarm/config.json
+[2023-06-24 15:04:52 SL-DDBD] (main.py 346): INFO AMP_OPT_LEVEL: O1
+AUG:
+  AUTO_AUGMENT: rand-m9-mstd0.5-inc1
+  COLOR_JITTER: 0.4
+  CUTMIX: 1.0
+  CUTMIX_MINMAX: null
+  MIXUP: 0.8
+  MIXUP_MODE: batch
+  MIXUP_PROB: 1.0
+  MIXUP_SWITCH_PROB: 0.5
+  RECOUNT: 1
+  REMODE: pixel
+  REPROB: 0.25
+BASE:
+- ''
+DATA:
+  BATCH_SIZE: 32
+  DATASET: imagenet
+  DATA_PATH: /home/featurize/data/dataset
+  IMG_SIZE: 224
+  INTERPOLATION: bicubic
+  MASK_PATCH_SIZE: 32
+  MASK_RATIO: 0.5
+  NUM_WORKERS: 8
+  PIN_MEMORY: true
+EVAL_MODE: false
+LOCAL_RANK: 0
+MODEL:
+  DROP_PATH_RATE: 0.1
+  DROP_RATE: 0.0
+  LABEL_SMOOTHING: 0.1
+  NAME: SL-DDBD
+  NUM_CLASSES: 10
+  PRETRAINED: ''
+  RESUME: MIM_finetune__swin_large__img224_window14__800ep.pth
+  SWIN:
+    APE: false
+    DEPTHS:
+    - 2
+    - 2
+    - 18
+    - 2
+    EMBED_DIM: 128
+    IN_CHANS: 3
+    MLP_RATIO: 4.0
+    NUM_HEADS:
+    - 4
+    - 8
+    - 16
+    - 32
+    PATCH_NORM: true
+    PATCH_SIZE: 4
+    QKV_BIAS: true
+    QK_SCALE: null
+    WINDOW_SIZE: 7
+  TYPE: swin
+  VIT:
+    DEPTH: 12
+    EMBED_DIM: 768
+    INIT_VALUES: 0.1
+    IN_CHANS: 3
+    MLP_RATIO: 4
+    NUM_HEADS: 12
+    PATCH_SIZE: 16
+    QKV_BIAS: true
+    USE_APE: false
+    USE_MEAN_POOLING: false
+    USE_RPB: false
+    USE_SHARED_RPB: true
+OUTPUT: output/SL-DDBD/SL-DDBD_patch_size32_ratio_0.5_110ep_for_staefarm
+PRETRAINED: SLDDBD_patchsize32_swin_ratio0.5_img224_statefarm_110ep.pth
+PRINT_FREQ: 100
+SAVE_FREQ: 5
+SEED: 0
+TAG: SL-DDBD_patch_size32_ratio_0.5_110ep_for_staefarm
+TEST:
+  CROP: true
+THROUGHPUT_MODE: false
+TRAIN:
+  ACCUMULATION_STEPS: 0
+  AUTO_RESUME: true
+  BASE_LR: 7.8125e-05
+  CLIP_GRAD: 5.0
+  EPOCHS: 110
+  LAYER_DECAY: 0.8
+  LR_SCHEDULER:
+    DECAY_EPOCHS: 30
+    DECAY_RATE: 0.1
+    GAMMA: 0.1
+    MULTISTEPS: []
+    NAME: cosine
+  MIN_LR: 1.5625e-08
+  OPTIMIZER:
+    BETAS:
+    - 0.9
+    - 0.999
+    EPS: 1.0e-08
+    MOMENTUM: 0.9
+    NAME: adamw
+  START_EPOCH: 0
+  USE_CHECKPOINT: false
+  WARMUP_EPOCHS: 20
+  WARMUP_LR: 1.5625e-08
+  WEIGHT_DECAY: 0.05
+TRAINING:
+  EPOCHSS: 110
+
+[2023-06-24 15:04:52 SL-DDBD] (data_finetune.py 64): INFO Fine-tune data transform, is_train=True:
+Compose(
+    RandomResizedCropAndInterpolation(size=(224, 224), scale=(0.08, 1.0), ratio=(0.75, 1.3333), interpolation=PIL.Image.BICUBIC)
+    RandomHorizontalFlip(p=0.5)
+    <timm.data.auto_augment.RandAugment object at 0x7f999465edd0>
+    ToTensor()
+    Normalize(mean=tensor([0.4850, 0.4560, 0.4060]), std=tensor([0.2290, 0.2240, 0.2250]))
+    <timm.data.random_erasing.RandomErasing object at 0x7f99982d8ad0>
+)
+[2023-06-24 15:04:52 SL-DDBD] (data_finetune.py 64): INFO Fine-tune data transform, is_train=False:
+Compose(
+    Resize(size=256, interpolation=PIL.Image.BICUBIC)
+    CenterCrop(size=(224, 224))
+    ToTensor()
+    Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))
+)
+[2023-06-24 15:04:52 SL-DDBD] (data_finetune.py 23): INFO Build dataset: train images = 20494, val images = 1930
+[2023-06-24 15:04:52 SL-DDBD] (main.py 76): INFO Creating model:swin/SL-DDBD
+[2023-06-24 15:04:53 SL-DDBD] (main.py 79): INFO SwinTransformer(
+  (patch_embed): PatchEmbed(
+    (proj): Conv2d(3, 128, kernel_size=(4, 4), stride=(4, 4))
+    (norm): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+  )
+  (pos_drop): Dropout(p=0.0, inplace=False)
+  (layers): ModuleList(
+    (0): BasicLayer(
+      dim=128, input_resolution=(56, 56), depth=2
+      (blocks): ModuleList(
+        (0): SwinTransformerBlock(
+          dim=128, input_resolution=(56, 56), num_heads=4, window_size=7, shift_size=0, mlp_ratio=4.0
+          (norm1): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (attn): WindowAttention(
+            dim=128, window_size=(7, 7), num_heads=4
+            (qkv): Linear(in_features=128, out_features=384, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=128, out_features=128, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+            (softmax): Softmax(dim=-1)
+          )
+          (drop_path): Identity()
+          (norm2): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=128, out_features=512, bias=True)
+            (act): GELU()
+            (fc2): Linear(in_features=512, out_features=128, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (1): SwinTransformerBlock(
+          dim=128, input_resolution=(56, 56), num_heads=4, window_size=7, shift_size=3, mlp_ratio=4.0
+          (norm1): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (attn): WindowAttention(
+            dim=128, window_size=(7, 7), num_heads=4
+            (qkv): Linear(in_features=128, out_features=384, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=128, out_features=128, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+            (softmax): Softmax(dim=-1)
+          )
+          (drop_path): DropPath()
+          (norm2): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=128, out_features=512, bias=True)
+            (act): GELU()
+            (fc2): Linear(in_features=512, out_features=128, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+      )
+      (downsample): PatchMerging(
+        input_resolution=(56, 56), dim=128
+        (reduction): Linear(in_features=512, out_features=256, bias=False)
+        (norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+    )
+    (1): BasicLayer(
+      dim=256, input_resolution=(28, 28), depth=2
+      (blocks): ModuleList(
+        (0): SwinTransformerBlock(
+          dim=256, input_resolution=(28, 28), num_heads=8, window_size=7, shift_size=0, mlp_ratio=4.0
+          (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (attn): WindowAttention(
+            dim=256, window_size=(7, 7), num_heads=8
+            (qkv): Linear(in_features=256, out_features=768, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=256, out_features=256, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+            (softmax): Softmax(dim=-1)
+          )
+          (drop_path): DropPath()
+          (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=256, out_features=1024, bias=True)
+            (act): GELU()
+            (fc2): Linear(in_features=1024, out_features=256, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (1): SwinTransformerBlock(
+          dim=256, input_resolution=(28, 28), num_heads=8, window_size=7, shift_size=3, mlp_ratio=4.0
+          (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (attn): WindowAttention(
+            dim=256, window_size=(7, 7), num_heads=8
+            (qkv): Linear(in_features=256, out_features=768, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=256, out_features=256, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+            (softmax): Softmax(dim=-1)
+          )
+          (drop_path): DropPath()
+          (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=256, out_features=1024, bias=True)
+            (act): GELU()
+            (fc2): Linear(in_features=1024, out_features=256, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+      )
+      (downsample): PatchMerging(
+        input_resolution=(28, 28), dim=256
+        (reduction): Linear(in_features=1024, out_features=512, bias=False)
+        (norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+      )
+    )
+    (2): BasicLayer(
+      dim=512, input_resolution=(14, 14), depth=18
+      (blocks): ModuleList(
+        (0): SwinTransformerBlock(
+          dim=512, input_resolution=(14, 14), num_heads=16, window_size=7, shift_size=0, mlp_ratio=4.0
+          (norm1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (attn): WindowAttention(
+            dim=512, window_size=(7, 7), num_heads=16
+            (qkv): Linear(in_features=512, out_features=1536, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=512, out_features=512, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+            (softmax): Softmax(dim=-1)
+          )
+          (drop_path): DropPath()
+          (norm2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=512, out_features=2048, bias=True)
+            (act): GELU()
+            (fc2): Linear(in_features=2048, out_features=512, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (1): SwinTransformerBlock(
+          dim=512, input_resolution=(14, 14), num_heads=16, window_size=7, shift_size=3, mlp_ratio=4.0
+          (norm1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (attn): WindowAttention(
+            dim=512, window_size=(7, 7), num_heads=16
+            (qkv): Linear(in_features=512, out_features=1536, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=512, out_features=512, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+            (softmax): Softmax(dim=-1)
+          )
+          (drop_path): DropPath()
+          (norm2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=512, out_features=2048, bias=True)
+            (act): GELU()
+            (fc2): Linear(in_features=2048, out_features=512, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (2): SwinTransformerBlock(
+          dim=512, input_resolution=(14, 14), num_heads=16, window_size=7, shift_size=0, mlp_ratio=4.0
+          (norm1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (attn): WindowAttention(
+            dim=512, window_size=(7, 7), num_heads=16
+            (qkv): Linear(in_features=512, out_features=1536, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=512, out_features=512, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+            (softmax): Softmax(dim=-1)
+          )
+          (drop_path): DropPath()
+          (norm2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=512, out_features=2048, bias=True)
+            (act): GELU()
+            (fc2): Linear(in_features=2048, out_features=512, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (3): SwinTransformerBlock(
+          dim=512, input_resolution=(14, 14), num_heads=16, window_size=7, shift_size=3, mlp_ratio=4.0
+          (norm1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (attn): WindowAttention(
+            dim=512, window_size=(7, 7), num_heads=16
+            (qkv): Linear(in_features=512, out_features=1536, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=512, out_features=512, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+            (softmax): Softmax(dim=-1)
+          )
+          (drop_path): DropPath()
+          (norm2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=512, out_features=2048, bias=True)
+            (act): GELU()
+            (fc2): Linear(in_features=2048, out_features=512, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (4): SwinTransformerBlock(
+          dim=512, input_resolution=(14, 14), num_heads=16, window_size=7, shift_size=0, mlp_ratio=4.0
+          (norm1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (attn): WindowAttention(
+            dim=512, window_size=(7, 7), num_heads=16
+            (qkv): Linear(in_features=512, out_features=1536, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=512, out_features=512, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+            (softmax): Softmax(dim=-1)
+          )
+          (drop_path): DropPath()
+          (norm2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=512, out_features=2048, bias=True)
+            (act): GELU()
+            (fc2): Linear(in_features=2048, out_features=512, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (5): SwinTransformerBlock(
+          dim=512, input_resolution=(14, 14), num_heads=16, window_size=7, shift_size=3, mlp_ratio=4.0
+          (norm1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (attn): WindowAttention(
+            dim=512, window_size=(7, 7), num_heads=16
+            (qkv): Linear(in_features=512, out_features=1536, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=512, out_features=512, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+            (softmax): Softmax(dim=-1)
+          )
+          (drop_path): DropPath()
+          (norm2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=512, out_features=2048, bias=True)
+            (act): GELU()
+            (fc2): Linear(in_features=2048, out_features=512, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (6): SwinTransformerBlock(
+          dim=512, input_resolution=(14, 14), num_heads=16, window_size=7, shift_size=0, mlp_ratio=4.0
+          (norm1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (attn): WindowAttention(
+            dim=512, window_size=(7, 7), num_heads=16
+            (qkv): Linear(in_features=512, out_features=1536, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=512, out_features=512, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+            (softmax): Softmax(dim=-1)
+          )
+          (drop_path): DropPath()
+          (norm2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=512, out_features=2048, bias=True)
+            (act): GELU()
+            (fc2): Linear(in_features=2048, out_features=512, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (7): SwinTransformerBlock(
+          dim=512, input_resolution=(14, 14), num_heads=16, window_size=7, shift_size=3, mlp_ratio=4.0
+          (norm1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (attn): WindowAttention(
+            dim=512, window_size=(7, 7), num_heads=16
+            (qkv): Linear(in_features=512, out_features=1536, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=512, out_features=512, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+            (softmax): Softmax(dim=-1)
+          )
+          (drop_path): DropPath()
+          (norm2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=512, out_features=2048, bias=True)
+            (act): GELU()
+            (fc2): Linear(in_features=2048, out_features=512, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (8): SwinTransformerBlock(
+          dim=512, input_resolution=(14, 14), num_heads=16, window_size=7, shift_size=0, mlp_ratio=4.0
+          (norm1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (attn): WindowAttention(
+            dim=512, window_size=(7, 7), num_heads=16
+            (qkv): Linear(in_features=512, out_features=1536, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=512, out_features=512, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+            (softmax): Softmax(dim=-1)
+          )
+          (drop_path): DropPath()
+          (norm2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=512, out_features=2048, bias=True)
+            (act): GELU()
+            (fc2): Linear(in_features=2048, out_features=512, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (9): SwinTransformerBlock(
+          dim=512, input_resolution=(14, 14), num_heads=16, window_size=7, shift_size=3, mlp_ratio=4.0
+          (norm1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (attn): WindowAttention(
+            dim=512, window_size=(7, 7), num_heads=16
+            (qkv): Linear(in_features=512, out_features=1536, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=512, out_features=512, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+            (softmax): Softmax(dim=-1)
+          )
+          (drop_path): DropPath()
+          (norm2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=512, out_features=2048, bias=True)
+            (act): GELU()
+            (fc2): Linear(in_features=2048, out_features=512, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (10): SwinTransformerBlock(
+          dim=512, input_resolution=(14, 14), num_heads=16, window_size=7, shift_size=0, mlp_ratio=4.0
+          (norm1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (attn): WindowAttention(
+            dim=512, window_size=(7, 7), num_heads=16
+            (qkv): Linear(in_features=512, out_features=1536, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=512, out_features=512, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+            (softmax): Softmax(dim=-1)
+          )
+          (drop_path): DropPath()
+          (norm2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=512, out_features=2048, bias=True)
+            (act): GELU()
+            (fc2): Linear(in_features=2048, out_features=512, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (11): SwinTransformerBlock(
+          dim=512, input_resolution=(14, 14), num_heads=16, window_size=7, shift_size=3, mlp_ratio=4.0
+          (norm1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (attn): WindowAttention(
+            dim=512, window_size=(7, 7), num_heads=16
+            (qkv): Linear(in_features=512, out_features=1536, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=512, out_features=512, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+            (softmax): Softmax(dim=-1)
+          )
+          (drop_path): DropPath()
+          (norm2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=512, out_features=2048, bias=True)
+            (act): GELU()
+            (fc2): Linear(in_features=2048, out_features=512, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (12): SwinTransformerBlock(
+          dim=512, input_resolution=(14, 14), num_heads=16, window_size=7, shift_size=0, mlp_ratio=4.0
+          (norm1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (attn): WindowAttention(
+            dim=512, window_size=(7, 7), num_heads=16
+            (qkv): Linear(in_features=512, out_features=1536, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=512, out_features=512, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+            (softmax): Softmax(dim=-1)
+          )
+          (drop_path): DropPath()
+          (norm2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=512, out_features=2048, bias=True)
+            (act): GELU()
+            (fc2): Linear(in_features=2048, out_features=512, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (13): SwinTransformerBlock(
+          dim=512, input_resolution=(14, 14), num_heads=16, window_size=7, shift_size=3, mlp_ratio=4.0
+          (norm1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (attn): WindowAttention(
+            dim=512, window_size=(7, 7), num_heads=16
+            (qkv): Linear(in_features=512, out_features=1536, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=512, out_features=512, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+            (softmax): Softmax(dim=-1)
+          )
+          (drop_path): DropPath()
+          (norm2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=512, out_features=2048, bias=True)
+            (act): GELU()
+            (fc2): Linear(in_features=2048, out_features=512, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (14): SwinTransformerBlock(
+          dim=512, input_resolution=(14, 14), num_heads=16, window_size=7, shift_size=0, mlp_ratio=4.0
+          (norm1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (attn): WindowAttention(
+            dim=512, window_size=(7, 7), num_heads=16
+            (qkv): Linear(in_features=512, out_features=1536, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=512, out_features=512, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+            (softmax): Softmax(dim=-1)
+          )
+          (drop_path): DropPath()
+          (norm2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=512, out_features=2048, bias=True)
+            (act): GELU()
+            (fc2): Linear(in_features=2048, out_features=512, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (15): SwinTransformerBlock(
+          dim=512, input_resolution=(14, 14), num_heads=16, window_size=7, shift_size=3, mlp_ratio=4.0
+          (norm1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (attn): WindowAttention(
+            dim=512, window_size=(7, 7), num_heads=16
+            (qkv): Linear(in_features=512, out_features=1536, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=512, out_features=512, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+            (softmax): Softmax(dim=-1)
+          )
+          (drop_path): DropPath()
+          (norm2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=512, out_features=2048, bias=True)
+            (act): GELU()
+            (fc2): Linear(in_features=2048, out_features=512, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (16): SwinTransformerBlock(
+          dim=512, input_resolution=(14, 14), num_heads=16, window_size=7, shift_size=0, mlp_ratio=4.0
+          (norm1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (attn): WindowAttention(
+            dim=512, window_size=(7, 7), num_heads=16
+            (qkv): Linear(in_features=512, out_features=1536, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=512, out_features=512, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+            (softmax): Softmax(dim=-1)
+          )
+          (drop_path): DropPath()
+          (norm2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=512, out_features=2048, bias=True)
+            (act): GELU()
+            (fc2): Linear(in_features=2048, out_features=512, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (17): SwinTransformerBlock(
+          dim=512, input_resolution=(14, 14), num_heads=16, window_size=7, shift_size=3, mlp_ratio=4.0
+          (norm1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (attn): WindowAttention(
+            dim=512, window_size=(7, 7), num_heads=16
+            (qkv): Linear(in_features=512, out_features=1536, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=512, out_features=512, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+            (softmax): Softmax(dim=-1)
+          )
+          (drop_path): DropPath()
+          (norm2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=512, out_features=2048, bias=True)
+            (act): GELU()
+            (fc2): Linear(in_features=2048, out_features=512, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+      )
+      (downsample): PatchMerging(
+        input_resolution=(14, 14), dim=512
+        (reduction): Linear(in_features=2048, out_features=1024, bias=False)
+        (norm): LayerNorm((2048,), eps=1e-05, elementwise_affine=True)
+      )
+    )
+    (3): BasicLayer(
+      dim=1024, input_resolution=(7, 7), depth=2
+      (blocks): ModuleList(
+        (0): SwinTransformerBlock(
+          dim=1024, input_resolution=(7, 7), num_heads=32, window_size=7, shift_size=0, mlp_ratio=4.0
+          (norm1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+          (attn): WindowAttention(
+            dim=1024, window_size=(7, 7), num_heads=32
+            (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=1024, out_features=1024, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+            (softmax): Softmax(dim=-1)
+          )
+          (drop_path): DropPath()
+          (norm2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+            (act): GELU()
+            (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (1): SwinTransformerBlock(
+          dim=1024, input_resolution=(7, 7), num_heads=32, window_size=7, shift_size=0, mlp_ratio=4.0
+          (norm1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+          (attn): WindowAttention(
+            dim=1024, window_size=(7, 7), num_heads=32
+            (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+            (attn_drop): Dropout(p=0.0, inplace=False)
+            (proj): Linear(in_features=1024, out_features=1024, bias=True)
+            (proj_drop): Dropout(p=0.0, inplace=False)
+            (softmax): Softmax(dim=-1)
+          )
+          (drop_path): DropPath()
+          (norm2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+          (mlp): Mlp(
+            (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+            (act): GELU()
+            (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+            (drop): Dropout(p=0.0, inplace=False)
+          )
+        )
+      )
+    )
+  )
+  (norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+  (avgpool): AdaptiveAvgPool1d(output_size=1)
+  (head): Linear(in_features=1024, out_features=10, bias=True)
+)
+[2023-06-24 15:04:53 SL-DDBD] (optimizer.py 70): INFO >>>>>>>>>> Build Optimizer for Fine-tuning Stage
+[2023-06-24 15:04:53 SL-DDBD] (optimizer.py 87): INFO No weight decay: {'absolute_pos_embed'}
+[2023-06-24 15:04:53 SL-DDBD] (optimizer.py 90): INFO No weight decay keywords: {'relative_position_bias_table'}
+[2023-06-24 15:04:53 SL-DDBD] (optimizer.py 182): INFO Param groups = {
+  "layer_0_decay": {
+    "group_name": "layer_0_decay",
+    "weight_decay": 0.05,
+    "params": [
+      "patch_embed.proj.weight"
+    ],
+    "lr": 2.9514790517935326e-07,
+    "lr_scale": 0.0037778931862957215
+  },
+  "layer_0_no_decay": {
+    "group_name": "layer_0_no_decay",
+    "weight_decay": 0.0,
+    "params": [
+      "patch_embed.proj.bias",
+      "patch_embed.norm.weight",
+      "patch_embed.norm.bias"
+    ],
+    "lr": 2.9514790517935326e-07,
+    "lr_scale": 0.0037778931862957215
+  },
+  "layer_1_no_decay": {
+    "group_name": "layer_1_no_decay",
+    "weight_decay": 0.0,
+    "params": [
+      "layers.0.blocks.0.norm1.weight",
+      "layers.0.blocks.0.norm1.bias",
+      "layers.0.blocks.0.attn.relative_position_bias_table",
+      "layers.0.blocks.0.attn.qkv.bias",
+      "layers.0.blocks.0.attn.proj.bias",
+      "layers.0.blocks.0.norm2.weight",
+      "layers.0.blocks.0.norm2.bias",
+      "layers.0.blocks.0.mlp.fc1.bias",
+      "layers.0.blocks.0.mlp.fc2.bias"
+    ],
+    "lr": 3.689348814741916e-07,
+    "lr_scale": 0.004722366482869652
+  },
+  "layer_1_decay": {
+    "group_name": "layer_1_decay",
+    "weight_decay": 0.05,
+    "params": [
+      "layers.0.blocks.0.attn.qkv.weight",
+      "layers.0.blocks.0.attn.proj.weight",
+      "layers.0.blocks.0.mlp.fc1.weight",
+      "layers.0.blocks.0.mlp.fc2.weight"
+    ],
+    "lr": 3.689348814741916e-07,
+    "lr_scale": 0.004722366482869652
+  },
+  "layer_2_no_decay": {
+    "group_name": "layer_2_no_decay",
+    "weight_decay": 0.0,
+    "params": [
+      "layers.0.blocks.1.norm1.weight",
+      "layers.0.blocks.1.norm1.bias",
+      "layers.0.blocks.1.attn.relative_position_bias_table",
+      "layers.0.blocks.1.attn.qkv.bias",
+      "layers.0.blocks.1.attn.proj.bias",
+      "layers.0.blocks.1.norm2.weight",
+      "layers.0.blocks.1.norm2.bias",
+      "layers.0.blocks.1.mlp.fc1.bias",
+      "layers.0.blocks.1.mlp.fc2.bias",
+      "layers.0.downsample.norm.weight",
+      "layers.0.downsample.norm.bias"
+    ],
+    "lr": 4.611686018427394e-07,
+    "lr_scale": 0.005902958103587064
+  },
+  "layer_2_decay": {
+    "group_name": "layer_2_decay",
+    "weight_decay": 0.05,
+    "params": [
+      "layers.0.blocks.1.attn.qkv.weight",
+      "layers.0.blocks.1.attn.proj.weight",
+      "layers.0.blocks.1.mlp.fc1.weight",
+      "layers.0.blocks.1.mlp.fc2.weight",
+      "layers.0.downsample.reduction.weight"
+    ],
+    "lr": 4.611686018427394e-07,
+    "lr_scale": 0.005902958103587064
+  },
+  "layer_3_no_decay": {
+    "group_name": "layer_3_no_decay",
+    "weight_decay": 0.0,
+    "params": [
+      "layers.1.blocks.0.norm1.weight",
+      "layers.1.blocks.0.norm1.bias",
+      "layers.1.blocks.0.attn.relative_position_bias_table",
+      "layers.1.blocks.0.attn.qkv.bias",
+      "layers.1.blocks.0.attn.proj.bias",
+      "layers.1.blocks.0.norm2.weight",
+      "layers.1.blocks.0.norm2.bias",
+      "layers.1.blocks.0.mlp.fc1.bias",
+      "layers.1.blocks.0.mlp.fc2.bias"
+    ],
+    "lr": 5.764607523034242e-07,
+    "lr_scale": 0.00737869762948383
+  },
+  "layer_3_decay": {
+    "group_name": "layer_3_decay",
+    "weight_decay": 0.05,
+    "params": [
+      "layers.1.blocks.0.attn.qkv.weight",
+      "layers.1.blocks.0.attn.proj.weight",
+      "layers.1.blocks.0.mlp.fc1.weight",
+      "layers.1.blocks.0.mlp.fc2.weight"
+    ],
+    "lr": 5.764607523034242e-07,
+    "lr_scale": 0.00737869762948383
+  },
+  "layer_4_no_decay": {
+    "group_name": "layer_4_no_decay",
+    "weight_decay": 0.0,
+    "params": [
+      "layers.1.blocks.1.norm1.weight",
+      "layers.1.blocks.1.norm1.bias",
+      "layers.1.blocks.1.attn.relative_position_bias_table",
+      "layers.1.blocks.1.attn.qkv.bias",
+      "layers.1.blocks.1.attn.proj.bias",
+      "layers.1.blocks.1.norm2.weight",
+      "layers.1.blocks.1.norm2.bias",
+      "layers.1.blocks.1.mlp.fc1.bias",
+      "layers.1.blocks.1.mlp.fc2.bias",
+      "layers.1.downsample.norm.weight",
+      "layers.1.downsample.norm.bias"
+    ],
+    "lr": 7.205759403792803e-07,
+    "lr_scale": 0.009223372036854787
+  },
+  "layer_4_decay": {
+    "group_name": "layer_4_decay",
+    "weight_decay": 0.05,
+    "params": [
+      "layers.1.blocks.1.attn.qkv.weight",
+      "layers.1.blocks.1.attn.proj.weight",
+      "layers.1.blocks.1.mlp.fc1.weight",
+      "layers.1.blocks.1.mlp.fc2.weight",
+      "layers.1.downsample.reduction.weight"
+    ],
+    "lr": 7.205759403792803e-07,
+    "lr_scale": 0.009223372036854787
+  },
+  "layer_5_no_decay": {
+    "group_name": "layer_5_no_decay",
+    "weight_decay": 0.0,
+    "params": [
+      "layers.2.blocks.0.norm1.weight",
+      "layers.2.blocks.0.norm1.bias",
+      "layers.2.blocks.0.attn.relative_position_bias_table",
+      "layers.2.blocks.0.attn.qkv.bias",
+      "layers.2.blocks.0.attn.proj.bias",
+      "layers.2.blocks.0.norm2.weight",
+      "layers.2.blocks.0.norm2.bias",
+      "layers.2.blocks.0.mlp.fc1.bias",
+      "layers.2.blocks.0.mlp.fc2.bias"
+    ],
+    "lr": 9.007199254741003e-07,
+    "lr_scale": 0.011529215046068483
+  },
+  "layer_5_decay": {
+    "group_name": "layer_5_decay",
+    "weight_decay": 0.05,
+    "params": [
+      "layers.2.blocks.0.attn.qkv.weight",
+      "layers.2.blocks.0.attn.proj.weight",
+      "layers.2.blocks.0.mlp.fc1.weight",
+      "layers.2.blocks.0.mlp.fc2.weight"
+    ],
+    "lr": 9.007199254741003e-07,
+    "lr_scale": 0.011529215046068483
+  },
+  "layer_6_no_decay": {
+    "group_name": "layer_6_no_decay",
+    "weight_decay": 0.0,
+    "params": [
+      "layers.2.blocks.1.norm1.weight",
+      "layers.2.blocks.1.norm1.bias",
+      "layers.2.blocks.1.attn.relative_position_bias_table",
+      "layers.2.blocks.1.attn.qkv.bias",
+      "layers.2.blocks.1.attn.proj.bias",
+      "layers.2.blocks.1.norm2.weight",
+      "layers.2.blocks.1.norm2.bias",
+      "layers.2.blocks.1.mlp.fc1.bias",
+      "layers.2.blocks.1.mlp.fc2.bias"
+    ],
+    "lr": 1.1258999068426252e-06,
+    "lr_scale": 0.014411518807585602
+  },
+  "layer_6_decay": {
+    "group_name": "layer_6_decay",
+    "weight_decay": 0.05,
+    "params": [
+      "layers.2.blocks.1.attn.qkv.weight",
+      "layers.2.blocks.1.attn.proj.weight",
+      "layers.2.blocks.1.mlp.fc1.weight",
+      "layers.2.blocks.1.mlp.fc2.weight"
+    ],
+    "lr": 1.1258999068426252e-06,
+    "lr_scale": 0.014411518807585602
+  },
+  "layer_7_no_decay": {
+    "group_name": "layer_7_no_decay",
+    "weight_decay": 0.0,
+    "params": [
+      "layers.2.blocks.2.norm1.weight",
+      "layers.2.blocks.2.norm1.bias",
+      "layers.2.blocks.2.attn.relative_position_bias_table",
+      "layers.2.blocks.2.attn.qkv.bias",
+      "layers.2.blocks.2.attn.proj.bias",
+      "layers.2.blocks.2.norm2.weight",
+      "layers.2.blocks.2.norm2.bias",
+      "layers.2.blocks.2.mlp.fc1.bias",
+      "layers.2.blocks.2.mlp.fc2.bias"
+    ],
+    "lr": 1.4073748835532814e-06,
+    "lr_scale": 0.018014398509482003
+  },
+  "layer_7_decay": {
+    "group_name": "layer_7_decay",
+    "weight_decay": 0.05,
+    "params": [
+      "layers.2.blocks.2.attn.qkv.weight",
+      "layers.2.blocks.2.attn.proj.weight",
+      "layers.2.blocks.2.mlp.fc1.weight",
+      "layers.2.blocks.2.mlp.fc2.weight"
+    ],
+    "lr": 1.4073748835532814e-06,
+    "lr_scale": 0.018014398509482003
+  },
+  "layer_8_no_decay": {
+    "group_name": "layer_8_no_decay",
+    "weight_decay": 0.0,
+    "params": [
+      "layers.2.blocks.3.norm1.weight",
+      "layers.2.blocks.3.norm1.bias",
+      "layers.2.blocks.3.attn.relative_position_bias_table",
+      "layers.2.blocks.3.attn.qkv.bias",
+      "layers.2.blocks.3.attn.proj.bias",
+      "layers.2.blocks.3.norm2.weight",
+      "layers.2.blocks.3.norm2.bias",
+      "layers.2.blocks.3.mlp.fc1.bias",
+      "layers.2.blocks.3.mlp.fc2.bias"
+    ],
+    "lr": 1.7592186044416019e-06,
+    "lr_scale": 0.022517998136852502
+  },
+  "layer_8_decay": {
+    "group_name": "layer_8_decay",
+    "weight_decay": 0.05,
+    "params": [
+      "layers.2.blocks.3.attn.qkv.weight",
+      "layers.2.blocks.3.attn.proj.weight",
+      "layers.2.blocks.3.mlp.fc1.weight",
+      "layers.2.blocks.3.mlp.fc2.weight"
+    ],
+    "lr": 1.7592186044416019e-06,
+    "lr_scale": 0.022517998136852502
+  },
+  "layer_9_no_decay": {
+    "group_name": "layer_9_no_decay",
+    "weight_decay": 0.0,
+    "params": [
+      "layers.2.blocks.4.norm1.weight",
+      "layers.2.blocks.4.norm1.bias",
+      "layers.2.blocks.4.attn.relative_position_bias_table",
+      "layers.2.blocks.4.attn.qkv.bias",
+      "layers.2.blocks.4.attn.proj.bias",
+      "layers.2.blocks.4.norm2.weight",
+      "layers.2.blocks.4.norm2.bias",
+      "layers.2.blocks.4.mlp.fc1.bias",
+      "layers.2.blocks.4.mlp.fc2.bias"
+    ],
+    "lr": 2.199023255552002e-06,
+    "lr_scale": 0.028147497671065624
+  },
+  "layer_9_decay": {
+    "group_name": "layer_9_decay",
+    "weight_decay": 0.05,
+    "params": [
+      "layers.2.blocks.4.attn.qkv.weight",
+      "layers.2.blocks.4.attn.proj.weight",
+      "layers.2.blocks.4.mlp.fc1.weight",
+      "layers.2.blocks.4.mlp.fc2.weight"
+    ],
+    "lr": 2.199023255552002e-06,
+    "lr_scale": 0.028147497671065624
+  },
+  "layer_10_no_decay": {
+    "group_name": "layer_10_no_decay",
+    "weight_decay": 0.0,
+    "params": [
+      "layers.2.blocks.5.norm1.weight",
+      "layers.2.blocks.5.norm1.bias",
+      "layers.2.blocks.5.attn.relative_position_bias_table",
+      "layers.2.blocks.5.attn.qkv.bias",
+      "layers.2.blocks.5.attn.proj.bias",
+      "layers.2.blocks.5.norm2.weight",
+      "layers.2.blocks.5.norm2.bias",
+      "layers.2.blocks.5.mlp.fc1.bias",
+      "layers.2.blocks.5.mlp.fc2.bias"
+    ],
+    "lr": 2.7487790694400023e-06,
+    "lr_scale": 0.03518437208883203
+  },
+  "layer_10_decay": {
+    "group_name": "layer_10_decay",
+    "weight_decay": 0.05,
+    "params": [
+      "layers.2.blocks.5.attn.qkv.weight",
+      "layers.2.blocks.5.attn.proj.weight",
+      "layers.2.blocks.5.mlp.fc1.weight",
+      "layers.2.blocks.5.mlp.fc2.weight"
+    ],
+    "lr": 2.7487790694400023e-06,
+    "lr_scale": 0.03518437208883203
+  },
+  "layer_11_no_decay": {
+    "group_name": "layer_11_no_decay",
+    "weight_decay": 0.0,
+    "params": [
+      "layers.2.blocks.6.norm1.weight",
+      "layers.2.blocks.6.norm1.bias",
+      "layers.2.blocks.6.attn.relative_position_bias_table",
+      "layers.2.blocks.6.attn.qkv.bias",
+      "layers.2.blocks.6.attn.proj.bias",
+      "layers.2.blocks.6.norm2.weight",
+      "layers.2.blocks.6.norm2.bias",
+      "layers.2.blocks.6.mlp.fc1.bias",
+      "layers.2.blocks.6.mlp.fc2.bias"
+    ],
+    "lr": 3.435973836800003e-06,
+    "lr_scale": 0.043980465111040035
+  },
+  "layer_11_decay": {
+    "group_name": "layer_11_decay",
+    "weight_decay": 0.05,
+    "params": [
+      "layers.2.blocks.6.attn.qkv.weight",
+      "layers.2.blocks.6.attn.proj.weight",
+      "layers.2.blocks.6.mlp.fc1.weight",
+      "layers.2.blocks.6.mlp.fc2.weight"
+    ],
+    "lr": 3.435973836800003e-06,
+    "lr_scale": 0.043980465111040035
+  },
+  "layer_12_no_decay": {
+    "group_name": "layer_12_no_decay",
+    "weight_decay": 0.0,
+    "params": [
+      "layers.2.blocks.7.norm1.weight",
+      "layers.2.blocks.7.norm1.bias",
+      "layers.2.blocks.7.attn.relative_position_bias_table",
+      "layers.2.blocks.7.attn.qkv.bias",
+      "layers.2.blocks.7.attn.proj.bias",
+      "layers.2.blocks.7.norm2.weight",
+      "layers.2.blocks.7.norm2.bias",
+      "layers.2.blocks.7.mlp.fc1.bias",
+      "layers.2.blocks.7.mlp.fc2.bias"
+    ],
+    "lr": 4.294967296000003e-06,
+    "lr_scale": 0.054975581388800036
+  },
+  "layer_12_decay": {
+    "group_name": "layer_12_decay",
+    "weight_decay": 0.05,
+    "params": [
+      "layers.2.blocks.7.attn.qkv.weight",
+      "layers.2.blocks.7.attn.proj.weight",
+      "layers.2.blocks.7.mlp.fc1.weight",
+      "layers.2.blocks.7.mlp.fc2.weight"
+    ],
+    "lr": 4.294967296000003e-06,
+    "lr_scale": 0.054975581388800036
+  },
+  "layer_13_no_decay": {
+    "group_name": "layer_13_no_decay",
+    "weight_decay": 0.0,
+    "params": [
+      "layers.2.blocks.8.norm1.weight",
+      "layers.2.blocks.8.norm1.bias",
+      "layers.2.blocks.8.attn.relative_position_bias_table",
+      "layers.2.blocks.8.attn.qkv.bias",
+      "layers.2.blocks.8.attn.proj.bias",
+      "layers.2.blocks.8.norm2.weight",
+      "layers.2.blocks.8.norm2.bias",
+      "layers.2.blocks.8.mlp.fc1.bias",
+      "layers.2.blocks.8.mlp.fc2.bias"
+    ],
+    "lr": 5.368709120000003e-06,
+    "lr_scale": 0.06871947673600004
+  },
+  "layer_13_decay": {
+    "group_name": "layer_13_decay",
+    "weight_decay": 0.05,
+    "params": [
+      "layers.2.blocks.8.attn.qkv.weight",
+      "layers.2.blocks.8.attn.proj.weight",
+      "layers.2.blocks.8.mlp.fc1.weight",
+      "layers.2.blocks.8.mlp.fc2.weight"
+    ],
+    "lr": 5.368709120000003e-06,
+    "lr_scale": 0.06871947673600004
+  },
+  "layer_14_no_decay": {
+    "group_name": "layer_14_no_decay",
+    "weight_decay": 0.0,
+    "params": [
+      "layers.2.blocks.9.norm1.weight",
+      "layers.2.blocks.9.norm1.bias",
+      "layers.2.blocks.9.attn.relative_position_bias_table",
+      "layers.2.blocks.9.attn.qkv.bias",
+      "layers.2.blocks.9.attn.proj.bias",
+      "layers.2.blocks.9.norm2.weight",
+      "layers.2.blocks.9.norm2.bias",
+      "layers.2.blocks.9.mlp.fc1.bias",
+      "layers.2.blocks.9.mlp.fc2.bias"
+    ],
+    "lr": 6.7108864000000044e-06,
+    "lr_scale": 0.08589934592000005
+  },
+  "layer_14_decay": {
+    "group_name": "layer_14_decay",
+    "weight_decay": 0.05,
+    "params": [
+      "layers.2.blocks.9.attn.qkv.weight",
+      "layers.2.blocks.9.attn.proj.weight",
+      "layers.2.blocks.9.mlp.fc1.weight",
+      "layers.2.blocks.9.mlp.fc2.weight"
+    ],
+    "lr": 6.7108864000000044e-06,
+    "lr_scale": 0.08589934592000005
+  },
+  "layer_15_no_decay": {
+    "group_name": "layer_15_no_decay",
+    "weight_decay": 0.0,
+    "params": [
+      "layers.2.blocks.10.norm1.weight",
+      "layers.2.blocks.10.norm1.bias",
+      "layers.2.blocks.10.attn.relative_position_bias_table",
+      "layers.2.blocks.10.attn.qkv.bias",
+      "layers.2.blocks.10.attn.proj.bias",
+      "layers.2.blocks.10.norm2.weight",
+      "layers.2.blocks.10.norm2.bias",
+      "layers.2.blocks.10.mlp.fc1.bias",
+      "layers.2.blocks.10.mlp.fc2.bias"
+    ],
+    "lr": 8.388608000000005e-06,
+    "lr_scale": 0.10737418240000006
+  },
+  "layer_15_decay": {
+    "group_name": "layer_15_decay",
+    "weight_decay": 0.05,
+    "params": [
+      "layers.2.blocks.10.attn.qkv.weight",
+      "layers.2.blocks.10.attn.proj.weight",
+      "layers.2.blocks.10.mlp.fc1.weight",
+      "layers.2.blocks.10.mlp.fc2.weight"
+    ],
+    "lr": 8.388608000000005e-06,
+    "lr_scale": 0.10737418240000006
+  },
+  "layer_16_no_decay": {
+    "group_name": "layer_16_no_decay",
+    "weight_decay": 0.0,
+    "params": [
+      "layers.2.blocks.11.norm1.weight",
+      "layers.2.blocks.11.norm1.bias",
+      "layers.2.blocks.11.attn.relative_position_bias_table",
+      "layers.2.blocks.11.attn.qkv.bias",
+      "layers.2.blocks.11.attn.proj.bias",
+      "layers.2.blocks.11.norm2.weight",
+      "layers.2.blocks.11.norm2.bias",
+      "layers.2.blocks.11.mlp.fc1.bias",
+      "layers.2.blocks.11.mlp.fc2.bias"
+    ],
+    "lr": 1.0485760000000004e-05,
+    "lr_scale": 0.13421772800000006
+  },
+  "layer_16_decay": {
+    "group_name": "layer_16_decay",
+    "weight_decay": 0.05,
+    "params": [
+      "layers.2.blocks.11.attn.qkv.weight",
+      "layers.2.blocks.11.attn.proj.weight",
+      "layers.2.blocks.11.mlp.fc1.weight",
+      "layers.2.blocks.11.mlp.fc2.weight"
+    ],
+    "lr": 1.0485760000000004e-05,
+    "lr_scale": 0.13421772800000006
+  },
+  "layer_17_no_decay": {
+    "group_name": "layer_17_no_decay",
+    "weight_decay": 0.0,
+    "params": [
+      "layers.2.blocks.12.norm1.weight",
+      "layers.2.blocks.12.norm1.bias",
+      "layers.2.blocks.12.attn.relative_position_bias_table",
+      "layers.2.blocks.12.attn.qkv.bias",
+      "layers.2.blocks.12.attn.proj.bias",
+      "layers.2.blocks.12.norm2.weight",
+      "layers.2.blocks.12.norm2.bias",
+      "layers.2.blocks.12.mlp.fc1.bias",
+      "layers.2.blocks.12.mlp.fc2.bias"
+    ],
+    "lr": 1.3107200000000007e-05,
+    "lr_scale": 0.1677721600000001
+  },
+  "layer_17_decay": {
+    "group_name": "layer_17_decay",
+    "weight_decay": 0.05,
+    "params": [
+      "layers.2.blocks.12.attn.qkv.weight",
+      "layers.2.blocks.12.attn.proj.weight",
+      "layers.2.blocks.12.mlp.fc1.weight",
+      "layers.2.blocks.12.mlp.fc2.weight"
+    ],
+    "lr": 1.3107200000000007e-05,
+    "lr_scale": 0.1677721600000001
+  },
+  "layer_18_no_decay": {
+    "group_name": "layer_18_no_decay",
+    "weight_decay": 0.0,
+    "params": [
+      "layers.2.blocks.13.norm1.weight",
+      "layers.2.blocks.13.norm1.bias",
+      "layers.2.blocks.13.attn.relative_position_bias_table",
+      "layers.2.blocks.13.attn.qkv.bias",
+      "layers.2.blocks.13.attn.proj.bias",
+      "layers.2.blocks.13.norm2.weight",
+      "layers.2.blocks.13.norm2.bias",
+      "layers.2.blocks.13.mlp.fc1.bias",
+      "layers.2.blocks.13.mlp.fc2.bias"
+    ],
+    "lr": 1.6384000000000008e-05,
+    "lr_scale": 0.20971520000000007
+  },
+  "layer_18_decay": {
+    "group_name": "layer_18_decay",
+    "weight_decay": 0.05,
+    "params": [
+      "layers.2.blocks.13.attn.qkv.weight",
+      "layers.2.blocks.13.attn.proj.weight",
+      "layers.2.blocks.13.mlp.fc1.weight",
+      "layers.2.blocks.13.mlp.fc2.weight"
+    ],
+    "lr": 1.6384000000000008e-05,
+    "lr_scale": 0.20971520000000007
+  },
+  "layer_19_no_decay": {
+    "group_name": "layer_19_no_decay",
+    "weight_decay": 0.0,
+    "params": [
+      "layers.2.blocks.14.norm1.weight",
+      "layers.2.blocks.14.norm1.bias",
+      "layers.2.blocks.14.attn.relative_position_bias_table",
+      "layers.2.blocks.14.attn.qkv.bias",
+      "layers.2.blocks.14.attn.proj.bias",
+      "layers.2.blocks.14.norm2.weight",
+      "layers.2.blocks.14.norm2.bias",
+      "layers.2.blocks.14.mlp.fc1.bias",
+      "layers.2.blocks.14.mlp.fc2.bias"
+    ],
+    "lr": 2.0480000000000007e-05,
+    "lr_scale": 0.2621440000000001
+  },
+  "layer_19_decay": {
+    "group_name": "layer_19_decay",
+    "weight_decay": 0.05,
+    "params": [
+      "layers.2.blocks.14.attn.qkv.weight",
+      "layers.2.blocks.14.attn.proj.weight",
+      "layers.2.blocks.14.mlp.fc1.weight",
+      "layers.2.blocks.14.mlp.fc2.weight"
+    ],
+    "lr": 2.0480000000000007e-05,
+    "lr_scale": 0.2621440000000001
+  },
+  "layer_20_no_decay": {
+    "group_name": "layer_20_no_decay",
+    "weight_decay": 0.0,
+    "params": [
+      "layers.2.blocks.15.norm1.weight",
+      "layers.2.blocks.15.norm1.bias",
+      "layers.2.blocks.15.attn.relative_position_bias_table",
+      "layers.2.blocks.15.attn.qkv.bias",
+      "layers.2.blocks.15.attn.proj.bias",
+      "layers.2.blocks.15.norm2.weight",
+      "layers.2.blocks.15.norm2.bias",
+      "layers.2.blocks.15.mlp.fc1.bias",
+      "layers.2.blocks.15.mlp.fc2.bias"
+    ],
+    "lr": 2.5600000000000006e-05,
+    "lr_scale": 0.3276800000000001
+  },
+  "layer_20_decay": {
+    "group_name": "layer_20_decay",
+    "weight_decay": 0.05,
+    "params": [
+      "layers.2.blocks.15.attn.qkv.weight",
+      "layers.2.blocks.15.attn.proj.weight",
+      "layers.2.blocks.15.mlp.fc1.weight",
+      "layers.2.blocks.15.mlp.fc2.weight"
+    ],
+    "lr": 2.5600000000000006e-05,
+    "lr_scale": 0.3276800000000001
+  },
+  "layer_21_no_decay": {
+    "group_name": "layer_21_no_decay",
+    "weight_decay": 0.0,
+    "params": [
+      "layers.2.blocks.16.norm1.weight",
+      "layers.2.blocks.16.norm1.bias",
+      "layers.2.blocks.16.attn.relative_position_bias_table",
+      "layers.2.blocks.16.attn.qkv.bias",
+      "layers.2.blocks.16.attn.proj.bias",
+      "layers.2.blocks.16.norm2.weight",
+      "layers.2.blocks.16.norm2.bias",
+      "layers.2.blocks.16.mlp.fc1.bias",
+      "layers.2.blocks.16.mlp.fc2.bias"
+    ],
+    "lr": 3.2000000000000005e-05,
+    "lr_scale": 0.4096000000000001
+  },
+  "layer_21_decay": {
+    "group_name": "layer_21_decay",
+    "weight_decay": 0.05,
+    "params": [
+      "layers.2.blocks.16.attn.qkv.weight",
+      "layers.2.blocks.16.attn.proj.weight",
+      "layers.2.blocks.16.mlp.fc1.weight",
+      "layers.2.blocks.16.mlp.fc2.weight"
+    ],
+    "lr": 3.2000000000000005e-05,
+    "lr_scale": 0.4096000000000001
+  },
+  "layer_22_no_decay": {
+    "group_name": "layer_22_no_decay",
+    "weight_decay": 0.0,
+    "params": [
+      "layers.2.blocks.17.norm1.weight",
+      "layers.2.blocks.17.norm1.bias",
+      "layers.2.blocks.17.attn.relative_position_bias_table",
+      "layers.2.blocks.17.attn.qkv.bias",
+      "layers.2.blocks.17.attn.proj.bias",
+      "layers.2.blocks.17.norm2.weight",
+      "layers.2.blocks.17.norm2.bias",
+      "layers.2.blocks.17.mlp.fc1.bias",
+      "layers.2.blocks.17.mlp.fc2.bias",
+      "layers.2.downsample.norm.weight",
+      "layers.2.downsample.norm.bias"
+    ],
+    "lr": 4.000000000000001e-05,
+    "lr_scale": 0.5120000000000001
+  },
+  "layer_22_decay": {
+    "group_name": "layer_22_decay",
+    "weight_decay": 0.05,
+    "params": [
+      "layers.2.blocks.17.attn.qkv.weight",
+      "layers.2.blocks.17.attn.proj.weight",
+      "layers.2.blocks.17.mlp.fc1.weight",
+      "layers.2.blocks.17.mlp.fc2.weight",
+      "layers.2.downsample.reduction.weight"
+    ],
+    "lr": 4.000000000000001e-05,
+    "lr_scale": 0.5120000000000001
+  },
+  "layer_23_no_decay": {
+    "group_name": "layer_23_no_decay",
+    "weight_decay": 0.0,
+    "params": [
+      "layers.3.blocks.0.norm1.weight",
+      "layers.3.blocks.0.norm1.bias",
+      "layers.3.blocks.0.attn.relative_position_bias_table",
+      "layers.3.blocks.0.attn.qkv.bias",
+      "layers.3.blocks.0.attn.proj.bias",
+      "layers.3.blocks.0.norm2.weight",
+      "layers.3.blocks.0.norm2.bias",
+      "layers.3.blocks.0.mlp.fc1.bias",
+      "layers.3.blocks.0.mlp.fc2.bias"
+    ],
+    "lr": 5.000000000000001e-05,
+    "lr_scale": 0.6400000000000001
+  },
+  "layer_23_decay": {
+    "group_name": "layer_23_decay",
+    "weight_decay": 0.05,
+    "params": [
+      "layers.3.blocks.0.attn.qkv.weight",
+      "layers.3.blocks.0.attn.proj.weight",
+      "layers.3.blocks.0.mlp.fc1.weight",
+      "layers.3.blocks.0.mlp.fc2.weight"
+    ],
+    "lr": 5.000000000000001e-05,
+    "lr_scale": 0.6400000000000001
+  },
+  "layer_24_no_decay": {
+    "group_name": "layer_24_no_decay",
+    "weight_decay": 0.0,
+    "params": [
+      "layers.3.blocks.1.norm1.weight",
+      "layers.3.blocks.1.norm1.bias",
+      "layers.3.blocks.1.attn.relative_position_bias_table",
+      "layers.3.blocks.1.attn.qkv.bias",
+      "layers.3.blocks.1.attn.proj.bias",
+      "layers.3.blocks.1.norm2.weight",
+      "layers.3.blocks.1.norm2.bias",
+      "layers.3.blocks.1.mlp.fc1.bias",
+      "layers.3.blocks.1.mlp.fc2.bias"
+    ],
+    "lr": 6.25e-05,
+    "lr_scale": 0.8
+  },
+  "layer_24_decay": {
+    "group_name": "layer_24_decay",
+    "weight_decay": 0.05,
+    "params": [
+      "layers.3.blocks.1.attn.qkv.weight",
+      "layers.3.blocks.1.attn.proj.weight",
+      "layers.3.blocks.1.mlp.fc1.weight",
+      "layers.3.blocks.1.mlp.fc2.weight"
+    ],
+    "lr": 6.25e-05,
+    "lr_scale": 0.8
+  },
+  "layer_25_no_decay": {
+    "group_name": "layer_25_no_decay",
+    "weight_decay": 0.0,
+    "params": [
+      "norm.weight",
+      "norm.bias",
+      "head.bias"
+    ],
+    "lr": 7.8125e-05,
+    "lr_scale": 1.0
+  },
+  "layer_25_decay": {
+    "group_name": "layer_25_decay",
+    "weight_decay": 0.05,
+    "params": [
+      "head.weight"
+    ],
+    "lr": 7.8125e-05,
+    "lr_scale": 1.0
+  }
+}
+[2023-06-24 15:04:53 SL-DDBD] (optimizer.py 105): INFO AdamW (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_0_decay
+    lr: 2.9514790517935326e-07
+    lr_scale: 0.0037778931862957215
+    weight_decay: 0.05
+
+Parameter Group 1
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_0_no_decay
+    lr: 2.9514790517935326e-07
+    lr_scale: 0.0037778931862957215
+    weight_decay: 0.0
+
+Parameter Group 2
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_1_no_decay
+    lr: 3.689348814741916e-07
+    lr_scale: 0.004722366482869652
+    weight_decay: 0.0
+
+Parameter Group 3
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_1_decay
+    lr: 3.689348814741916e-07
+    lr_scale: 0.004722366482869652
+    weight_decay: 0.05
+
+Parameter Group 4
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_2_no_decay
+    lr: 4.611686018427394e-07
+    lr_scale: 0.005902958103587064
+    weight_decay: 0.0
+
+Parameter Group 5
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_2_decay
+    lr: 4.611686018427394e-07
+    lr_scale: 0.005902958103587064
+    weight_decay: 0.05
+
+Parameter Group 6
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_3_no_decay
+    lr: 5.764607523034242e-07
+    lr_scale: 0.00737869762948383
+    weight_decay: 0.0
+
+Parameter Group 7
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_3_decay
+    lr: 5.764607523034242e-07
+    lr_scale: 0.00737869762948383
+    weight_decay: 0.05
+
+Parameter Group 8
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_4_no_decay
+    lr: 7.205759403792803e-07
+    lr_scale: 0.009223372036854787
+    weight_decay: 0.0
+
+Parameter Group 9
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_4_decay
+    lr: 7.205759403792803e-07
+    lr_scale: 0.009223372036854787
+    weight_decay: 0.05
+
+Parameter Group 10
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_5_no_decay
+    lr: 9.007199254741003e-07
+    lr_scale: 0.011529215046068483
+    weight_decay: 0.0
+
+Parameter Group 11
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_5_decay
+    lr: 9.007199254741003e-07
+    lr_scale: 0.011529215046068483
+    weight_decay: 0.05
+
+Parameter Group 12
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_6_no_decay
+    lr: 1.1258999068426252e-06
+    lr_scale: 0.014411518807585602
+    weight_decay: 0.0
+
+Parameter Group 13
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_6_decay
+    lr: 1.1258999068426252e-06
+    lr_scale: 0.014411518807585602
+    weight_decay: 0.05
+
+Parameter Group 14
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_7_no_decay
+    lr: 1.4073748835532814e-06
+    lr_scale: 0.018014398509482003
+    weight_decay: 0.0
+
+Parameter Group 15
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_7_decay
+    lr: 1.4073748835532814e-06
+    lr_scale: 0.018014398509482003
+    weight_decay: 0.05
+
+Parameter Group 16
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_8_no_decay
+    lr: 1.7592186044416019e-06
+    lr_scale: 0.022517998136852502
+    weight_decay: 0.0
+
+Parameter Group 17
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_8_decay
+    lr: 1.7592186044416019e-06
+    lr_scale: 0.022517998136852502
+    weight_decay: 0.05
+
+Parameter Group 18
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_9_no_decay
+    lr: 2.199023255552002e-06
+    lr_scale: 0.028147497671065624
+    weight_decay: 0.0
+
+Parameter Group 19
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_9_decay
+    lr: 2.199023255552002e-06
+    lr_scale: 0.028147497671065624
+    weight_decay: 0.05
+
+Parameter Group 20
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_10_no_decay
+    lr: 2.7487790694400023e-06
+    lr_scale: 0.03518437208883203
+    weight_decay: 0.0
+
+Parameter Group 21
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_10_decay
+    lr: 2.7487790694400023e-06
+    lr_scale: 0.03518437208883203
+    weight_decay: 0.05
+
+Parameter Group 22
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_11_no_decay
+    lr: 3.435973836800003e-06
+    lr_scale: 0.043980465111040035
+    weight_decay: 0.0
+
+Parameter Group 23
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_11_decay
+    lr: 3.435973836800003e-06
+    lr_scale: 0.043980465111040035
+    weight_decay: 0.05
+
+Parameter Group 24
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_12_no_decay
+    lr: 4.294967296000003e-06
+    lr_scale: 0.054975581388800036
+    weight_decay: 0.0
+
+Parameter Group 25
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_12_decay
+    lr: 4.294967296000003e-06
+    lr_scale: 0.054975581388800036
+    weight_decay: 0.05
+
+Parameter Group 26
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_13_no_decay
+    lr: 5.368709120000003e-06
+    lr_scale: 0.06871947673600004
+    weight_decay: 0.0
+
+Parameter Group 27
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_13_decay
+    lr: 5.368709120000003e-06
+    lr_scale: 0.06871947673600004
+    weight_decay: 0.05
+
+Parameter Group 28
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_14_no_decay
+    lr: 6.7108864000000044e-06
+    lr_scale: 0.08589934592000005
+    weight_decay: 0.0
+
+Parameter Group 29
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_14_decay
+    lr: 6.7108864000000044e-06
+    lr_scale: 0.08589934592000005
+    weight_decay: 0.05
+
+Parameter Group 30
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_15_no_decay
+    lr: 8.388608000000005e-06
+    lr_scale: 0.10737418240000006
+    weight_decay: 0.0
+
+Parameter Group 31
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_15_decay
+    lr: 8.388608000000005e-06
+    lr_scale: 0.10737418240000006
+    weight_decay: 0.05
+
+Parameter Group 32
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_16_no_decay
+    lr: 1.0485760000000004e-05
+    lr_scale: 0.13421772800000006
+    weight_decay: 0.0
+
+Parameter Group 33
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_16_decay
+    lr: 1.0485760000000004e-05
+    lr_scale: 0.13421772800000006
+    weight_decay: 0.05
+
+Parameter Group 34
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_17_no_decay
+    lr: 1.3107200000000007e-05
+    lr_scale: 0.1677721600000001
+    weight_decay: 0.0
+
+Parameter Group 35
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_17_decay
+    lr: 1.3107200000000007e-05
+    lr_scale: 0.1677721600000001
+    weight_decay: 0.05
+
+Parameter Group 36
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_18_no_decay
+    lr: 1.6384000000000008e-05
+    lr_scale: 0.20971520000000007
+    weight_decay: 0.0
+
+Parameter Group 37
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_18_decay
+    lr: 1.6384000000000008e-05
+    lr_scale: 0.20971520000000007
+    weight_decay: 0.05
+
+Parameter Group 38
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_19_no_decay
+    lr: 2.0480000000000007e-05
+    lr_scale: 0.2621440000000001
+    weight_decay: 0.0
+
+Parameter Group 39
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_19_decay
+    lr: 2.0480000000000007e-05
+    lr_scale: 0.2621440000000001
+    weight_decay: 0.05
+
+Parameter Group 40
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_20_no_decay
+    lr: 2.5600000000000006e-05
+    lr_scale: 0.3276800000000001
+    weight_decay: 0.0
+
+Parameter Group 41
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_20_decay
+    lr: 2.5600000000000006e-05
+    lr_scale: 0.3276800000000001
+    weight_decay: 0.05
+
+Parameter Group 42
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_21_no_decay
+    lr: 3.2000000000000005e-05
+    lr_scale: 0.4096000000000001
+    weight_decay: 0.0
+
+Parameter Group 43
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_21_decay
+    lr: 3.2000000000000005e-05
+    lr_scale: 0.4096000000000001
+    weight_decay: 0.05
+
+Parameter Group 44
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_22_no_decay
+    lr: 4.000000000000001e-05
+    lr_scale: 0.5120000000000001
+    weight_decay: 0.0
+
+Parameter Group 45
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_22_decay
+    lr: 4.000000000000001e-05
+    lr_scale: 0.5120000000000001
+    weight_decay: 0.05
+
+Parameter Group 46
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_23_no_decay
+    lr: 5.000000000000001e-05
+    lr_scale: 0.6400000000000001
+    weight_decay: 0.0
+
+Parameter Group 47
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_23_decay
+    lr: 5.000000000000001e-05
+    lr_scale: 0.6400000000000001
+    weight_decay: 0.05
+
+Parameter Group 48
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_24_no_decay
+    lr: 6.25e-05
+    lr_scale: 0.8
+    weight_decay: 0.0
+
+Parameter Group 49
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_24_decay
+    lr: 6.25e-05
+    lr_scale: 0.8
+    weight_decay: 0.05
+
+Parameter Group 50
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_25_no_decay
+    lr: 7.8125e-05
+    lr_scale: 1.0
+    weight_decay: 0.0
+
+Parameter Group 51
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    group_name: layer_25_decay
+    lr: 7.8125e-05
+    lr_scale: 1.0
+    weight_decay: 0.05
+)
+[2023-06-24 15:04:53 SL-DDBD] (main.py 88): INFO number of params: 86753474
+[2023-06-24 15:04:53 SL-DDBD] (utils.py 94): INFO All checkpoints founded in output/SL-DDBD/SL-DDBD_patch_size32_ratio_0.5_110ep_for_staefarm: []
+[2023-06-24 15:04:53 SL-DDBD] (main.py 115): INFO no checkpoint found in output/SL-DDBD/SL-DDBD_patch_size32_ratio_0.5_110ep_for_staefarm, ignoring auto resume
+[2023-06-24 15:04:53 SL-DDBD] (utils.py 23): INFO >>>>>>>>>> Resuming from MIM_finetune__swin_large__img224_window14__800ep.pth ..........
+[2023-06-24 15:05:00 SL-DDBD] (utils.py 43): INFO _IncompatibleKeys(missing_keys=['patch_embed.proj.weight', 'patch_embed.proj.bias', 'patch_embed.norm.weight', 'patch_embed.norm.bias', 'layers.0.blocks.0.norm1.weight', 'layers.0.blocks.0.norm1.bias', 'layers.0.blocks.0.attn.relative_position_bias_table', 'layers.0.blocks.0.attn.relative_position_index', 'layers.0.blocks.0.attn.qkv.weight', 'layers.0.blocks.0.attn.qkv.bias', 'layers.0.blocks.0.attn.proj.weight', 'layers.0.blocks.0.attn.proj.bias', 'layers.0.blocks.0.norm2.weight', 'layers.0.blocks.0.norm2.bias', 'layers.0.blocks.0.mlp.fc1.weight', 'layers.0.blocks.0.mlp.fc1.bias', 'layers.0.blocks.0.mlp.fc2.weight', 'layers.0.blocks.0.mlp.fc2.bias', 'layers.0.blocks.1.attn_mask', 'layers.0.blocks.1.norm1.weight', 'layers.0.blocks.1.norm1.bias', 'layers.0.blocks.1.attn.relative_position_bias_table', 'layers.0.blocks.1.attn.relative_position_index', 'layers.0.blocks.1.attn.qkv.weight', 'layers.0.blocks.1.attn.qkv.bias', 'layers.0.blocks.1.attn.proj.weight', 'layers.0.blocks.1.attn.proj.bias', 'layers.0.blocks.1.norm2.weight', 'layers.0.blocks.1.norm2.bias', 'layers.0.blocks.1.mlp.fc1.weight', 'layers.0.blocks.1.mlp.fc1.bias', 'layers.0.blocks.1.mlp.fc2.weight', 'layers.0.blocks.1.mlp.fc2.bias', 'layers.0.downsample.reduction.weight', 'layers.0.downsample.norm.weight', 'layers.0.downsample.norm.bias', 'layers.1.blocks.0.norm1.weight', 'layers.1.blocks.0.norm1.bias', 'layers.1.blocks.0.attn.relative_position_bias_table', 'layers.1.blocks.0.attn.relative_position_index', 'layers.1.blocks.0.attn.qkv.weight', 'layers.1.blocks.0.attn.qkv.bias', 'layers.1.blocks.0.attn.proj.weight', 'layers.1.blocks.0.attn.proj.bias', 'layers.1.blocks.0.norm2.weight', 'layers.1.blocks.0.norm2.bias', 'layers.1.blocks.0.mlp.fc1.weight', 'layers.1.blocks.0.mlp.fc1.bias', 'layers.1.blocks.0.mlp.fc2.weight', 'layers.1.blocks.0.mlp.fc2.bias', 'layers.1.blocks.1.attn_mask', 'layers.1.blocks.1.norm1.weight', 'layers.1.blocks.1.norm1.bias', 'layers.1.blocks.1.attn.relative_position_bias_table', 'layers.1.blocks.1.attn.relative_position_index', 'layers.1.blocks.1.attn.qkv.weight', 'layers.1.blocks.1.attn.qkv.bias', 'layers.1.blocks.1.attn.proj.weight', 'layers.1.blocks.1.attn.proj.bias', 'layers.1.blocks.1.norm2.weight', 'layers.1.blocks.1.norm2.bias', 'layers.1.blocks.1.mlp.fc1.weight', 'layers.1.blocks.1.mlp.fc1.bias', 'layers.1.blocks.1.mlp.fc2.weight', 'layers.1.blocks.1.mlp.fc2.bias', 'layers.1.downsample.reduction.weight', 'layers.1.downsample.norm.weight', 'layers.1.downsample.norm.bias', 'layers.2.blocks.0.norm1.weight', 'layers.2.blocks.0.norm1.bias', 'layers.2.blocks.0.attn.relative_position_bias_table', 'layers.2.blocks.0.attn.relative_position_index', 'layers.2.blocks.0.attn.qkv.weight', 'layers.2.blocks.0.attn.qkv.bias', 'layers.2.blocks.0.attn.proj.weight', 'layers.2.blocks.0.attn.proj.bias', 'layers.2.blocks.0.norm2.weight', 'layers.2.blocks.0.norm2.bias', 'layers.2.blocks.0.mlp.fc1.weight', 'layers.2.blocks.0.mlp.fc1.bias', 'layers.2.blocks.0.mlp.fc2.weight', 'layers.2.blocks.0.mlp.fc2.bias', 'layers.2.blocks.1.attn_mask', 'layers.2.blocks.1.norm1.weight', 'layers.2.blocks.1.norm1.bias', 'layers.2.blocks.1.attn.relative_position_bias_table', 'layers.2.blocks.1.attn.relative_position_index', 'layers.2.blocks.1.attn.qkv.weight', 'layers.2.blocks.1.attn.qkv.bias', 'layers.2.blocks.1.attn.proj.weight', 'layers.2.blocks.1.attn.proj.bias', 'layers.2.blocks.1.norm2.weight', 'layers.2.blocks.1.norm2.bias', 'layers.2.blocks.1.mlp.fc1.weight', 'layers.2.blocks.1.mlp.fc1.bias', 'layers.2.blocks.1.mlp.fc2.weight', 'layers.2.blocks.1.mlp.fc2.bias', 'layers.2.blocks.2.norm1.weight', 'layers.2.blocks.2.norm1.bias', 'layers.2.blocks.2.attn.relative_position_bias_table', 'layers.2.blocks.2.attn.relative_position_index', 'layers.2.blocks.2.attn.qkv.weight', 'layers.2.blocks.2.attn.qkv.bias', 'layers.2.blocks.2.attn.proj.weight', 'layers.2.blocks.2.attn.proj.bias', 'layers.2.blocks.2.norm2.weight', 'layers.2.blocks.2.norm2.bias', 'layers.2.blocks.2.mlp.fc1.weight', 'layers.2.blocks.2.mlp.fc1.bias', 'layers.2.blocks.2.mlp.fc2.weight', 'layers.2.blocks.2.mlp.fc2.bias', 'layers.2.blocks.3.attn_mask', 'layers.2.blocks.3.norm1.weight', 'layers.2.blocks.3.norm1.bias', 'layers.2.blocks.3.attn.relative_position_bias_table', 'layers.2.blocks.3.attn.relative_position_index', 'layers.2.blocks.3.attn.qkv.weight', 'layers.2.blocks.3.attn.qkv.bias', 'layers.2.blocks.3.attn.proj.weight', 'layers.2.blocks.3.attn.proj.bias', 'layers.2.blocks.3.norm2.weight', 'layers.2.blocks.3.norm2.bias', 'layers.2.blocks.3.mlp.fc1.weight', 'layers.2.blocks.3.mlp.fc1.bias', 'layers.2.blocks.3.mlp.fc2.weight', 'layers.2.blocks.3.mlp.fc2.bias', 'layers.2.blocks.4.norm1.weight', 'layers.2.blocks.4.norm1.bias', 'layers.2.blocks.4.attn.relative_position_bias_table', 'layers.2.blocks.4.attn.relative_position_index', 'layers.2.blocks.4.attn.qkv.weight', 'layers.2.blocks.4.attn.qkv.bias', 'layers.2.blocks.4.attn.proj.weight', 'layers.2.blocks.4.attn.proj.bias', 'layers.2.blocks.4.norm2.weight', 'layers.2.blocks.4.norm2.bias', 'layers.2.blocks.4.mlp.fc1.weight', 'layers.2.blocks.4.mlp.fc1.bias', 'layers.2.blocks.4.mlp.fc2.weight', 'layers.2.blocks.4.mlp.fc2.bias', 'layers.2.blocks.5.attn_mask', 'layers.2.blocks.5.norm1.weight', 'layers.2.blocks.5.norm1.bias', 'layers.2.blocks.5.attn.relative_position_bias_table', 'layers.2.blocks.5.attn.relative_position_index', 'layers.2.blocks.5.attn.qkv.weight', 'layers.2.blocks.5.attn.qkv.bias', 'layers.2.blocks.5.attn.proj.weight', 'layers.2.blocks.5.attn.proj.bias', 'layers.2.blocks.5.norm2.weight', 'layers.2.blocks.5.norm2.bias', 'layers.2.blocks.5.mlp.fc1.weight', 'layers.2.blocks.5.mlp.fc1.bias', 'layers.2.blocks.5.mlp.fc2.weight', 'layers.2.blocks.5.mlp.fc2.bias', 'layers.2.blocks.6.norm1.weight', 'layers.2.blocks.6.norm1.bias', 'layers.2.blocks.6.attn.relative_position_bias_table', 'layers.2.blocks.6.attn.relative_position_index', 'layers.2.blocks.6.attn.qkv.weight', 'layers.2.blocks.6.attn.qkv.bias', 'layers.2.blocks.6.attn.proj.weight', 'layers.2.blocks.6.attn.proj.bias', 'layers.2.blocks.6.norm2.weight', 'layers.2.blocks.6.norm2.bias', 'layers.2.blocks.6.mlp.fc1.weight', 'layers.2.blocks.6.mlp.fc1.bias', 'layers.2.blocks.6.mlp.fc2.weight', 'layers.2.blocks.6.mlp.fc2.bias', 'layers.2.blocks.7.attn_mask', 'layers.2.blocks.7.norm1.weight', 'layers.2.blocks.7.norm1.bias', 'layers.2.blocks.7.attn.relative_position_bias_table', 'layers.2.blocks.7.attn.relative_position_index', 'layers.2.blocks.7.attn.qkv.weight', 'layers.2.blocks.7.attn.qkv.bias', 'layers.2.blocks.7.attn.proj.weight', 'layers.2.blocks.7.attn.proj.bias', 'layers.2.blocks.7.norm2.weight', 'layers.2.blocks.7.norm2.bias', 'layers.2.blocks.7.mlp.fc1.weight', 'layers.2.blocks.7.mlp.fc1.bias', 'layers.2.blocks.7.mlp.fc2.weight', 'layers.2.blocks.7.mlp.fc2.bias', 'layers.2.blocks.8.norm1.weight', 'layers.2.blocks.8.norm1.bias', 'layers.2.blocks.8.attn.relative_position_bias_table', 'layers.2.blocks.8.attn.relative_position_index', 'layers.2.blocks.8.attn.qkv.weight', 'layers.2.blocks.8.attn.qkv.bias', 'layers.2.blocks.8.attn.proj.weight', 'layers.2.blocks.8.attn.proj.bias', 'layers.2.blocks.8.norm2.weight', 'layers.2.blocks.8.norm2.bias', 'layers.2.blocks.8.mlp.fc1.weight', 'layers.2.blocks.8.mlp.fc1.bias', 'layers.2.blocks.8.mlp.fc2.weight', 'layers.2.blocks.8.mlp.fc2.bias', 'layers.2.blocks.9.attn_mask', 'layers.2.blocks.9.norm1.weight', 'layers.2.blocks.9.norm1.bias', 'layers.2.blocks.9.attn.relative_position_bias_table', 'layers.2.blocks.9.attn.relative_position_index', 'layers.2.blocks.9.attn.qkv.weight', 'layers.2.blocks.9.attn.qkv.bias', 'layers.2.blocks.9.attn.proj.weight', 'layers.2.blocks.9.attn.proj.bias', 'layers.2.blocks.9.norm2.weight', 'layers.2.blocks.9.norm2.bias', 'layers.2.blocks.9.mlp.fc1.weight', 'layers.2.blocks.9.mlp.fc1.bias', 'layers.2.blocks.9.mlp.fc2.weight', 'layers.2.blocks.9.mlp.fc2.bias', 'layers.2.blocks.10.norm1.weight', 'layers.2.blocks.10.norm1.bias', 'layers.2.blocks.10.attn.relative_position_bias_table', 'layers.2.blocks.10.attn.relative_position_index', 'layers.2.blocks.10.attn.qkv.weight', 'layers.2.blocks.10.attn.qkv.bias', 'layers.2.blocks.10.attn.proj.weight', 'layers.2.blocks.10.attn.proj.bias', 'layers.2.blocks.10.norm2.weight', 'layers.2.blocks.10.norm2.bias', 'layers.2.blocks.10.mlp.fc1.weight', 'layers.2.blocks.10.mlp.fc1.bias', 'layers.2.blocks.10.mlp.fc2.weight', 'layers.2.blocks.10.mlp.fc2.bias', 'layers.2.blocks.11.attn_mask', 'layers.2.blocks.11.norm1.weight', 'layers.2.blocks.11.norm1.bias', 'layers.2.blocks.11.attn.relative_position_bias_table', 'layers.2.blocks.11.attn.relative_position_index', 'layers.2.blocks.11.attn.qkv.weight', 'layers.2.blocks.11.attn.qkv.bias', 'layers.2.blocks.11.attn.proj.weight', 'layers.2.blocks.11.attn.proj.bias', 'layers.2.blocks.11.norm2.weight', 'layers.2.blocks.11.norm2.bias', 'layers.2.blocks.11.mlp.fc1.weight', 'layers.2.blocks.11.mlp.fc1.bias', 'layers.2.blocks.11.mlp.fc2.weight', 'layers.2.blocks.11.mlp.fc2.bias', 'layers.2.blocks.12.norm1.weight', 'layers.2.blocks.12.norm1.bias', 'layers.2.blocks.12.attn.relative_position_bias_table', 'layers.2.blocks.12.attn.relative_position_index', 'layers.2.blocks.12.attn.qkv.weight', 'layers.2.blocks.12.attn.qkv.bias', 'layers.2.blocks.12.attn.proj.weight', 'layers.2.blocks.12.attn.proj.bias', 'layers.2.blocks.12.norm2.weight', 'layers.2.blocks.12.norm2.bias', 'layers.2.blocks.12.mlp.fc1.weight', 'layers.2.blocks.12.mlp.fc1.bias', 'layers.2.blocks.12.mlp.fc2.weight', 'layers.2.blocks.12.mlp.fc2.bias', 'layers.2.blocks.13.attn_mask', 'layers.2.blocks.13.norm1.weight', 'layers.2.blocks.13.norm1.bias', 'layers.2.blocks.13.attn.relative_position_bias_table', 'layers.2.blocks.13.attn.relative_position_index', 'layers.2.blocks.13.attn.qkv.weight', 'layers.2.blocks.13.attn.qkv.bias', 'layers.2.blocks.13.attn.proj.weight', 'layers.2.blocks.13.attn.proj.bias', 'layers.2.blocks.13.norm2.weight', 'layers.2.blocks.13.norm2.bias', 'layers.2.blocks.13.mlp.fc1.weight', 'layers.2.blocks.13.mlp.fc1.bias', 'layers.2.blocks.13.mlp.fc2.weight', 'layers.2.blocks.13.mlp.fc2.bias', 'layers.2.blocks.14.norm1.weight', 'layers.2.blocks.14.norm1.bias', 'layers.2.blocks.14.attn.relative_position_bias_table', 'layers.2.blocks.14.attn.relative_position_index', 'layers.2.blocks.14.attn.qkv.weight', 'layers.2.blocks.14.attn.qkv.bias', 'layers.2.blocks.14.attn.proj.weight', 'layers.2.blocks.14.attn.proj.bias', 'layers.2.blocks.14.norm2.weight', 'layers.2.blocks.14.norm2.bias', 'layers.2.blocks.14.mlp.fc1.weight', 'layers.2.blocks.14.mlp.fc1.bias', 'layers.2.blocks.14.mlp.fc2.weight', 'layers.2.blocks.14.mlp.fc2.bias', 'layers.2.blocks.15.attn_mask', 'layers.2.blocks.15.norm1.weight', 'layers.2.blocks.15.norm1.bias', 'layers.2.blocks.15.attn.relative_position_bias_table', 'layers.2.blocks.15.attn.relative_position_index', 'layers.2.blocks.15.attn.qkv.weight', 'layers.2.blocks.15.attn.qkv.bias', 'layers.2.blocks.15.attn.proj.weight', 'layers.2.blocks.15.attn.proj.bias', 'layers.2.blocks.15.norm2.weight', 'layers.2.blocks.15.norm2.bias', 'layers.2.blocks.15.mlp.fc1.weight', 'layers.2.blocks.15.mlp.fc1.bias', 'layers.2.blocks.15.mlp.fc2.weight', 'layers.2.blocks.15.mlp.fc2.bias', 'layers.2.blocks.16.norm1.weight', 'layers.2.blocks.16.norm1.bias', 'layers.2.blocks.16.attn.relative_position_bias_table', 'layers.2.blocks.16.attn.relative_position_index', 'layers.2.blocks.16.attn.qkv.weight', 'layers.2.blocks.16.attn.qkv.bias', 'layers.2.blocks.16.attn.proj.weight', 'layers.2.blocks.16.attn.proj.bias', 'layers.2.blocks.16.norm2.weight', 'layers.2.blocks.16.norm2.bias', 'layers.2.blocks.16.mlp.fc1.weight', 'layers.2.blocks.16.mlp.fc1.bias', 'layers.2.blocks.16.mlp.fc2.weight', 'layers.2.blocks.16.mlp.fc2.bias', 'layers.2.blocks.17.attn_mask', 'layers.2.blocks.17.norm1.weight', 'layers.2.blocks.17.norm1.bias', 'layers.2.blocks.17.attn.relative_position_bias_table', 'layers.2.blocks.17.attn.relative_position_index', 'layers.2.blocks.17.attn.qkv.weight', 'layers.2.blocks.17.attn.qkv.bias', 'layers.2.blocks.17.attn.proj.weight', 'layers.2.blocks.17.attn.proj.bias', 'layers.2.blocks.17.norm2.weight', 'layers.2.blocks.17.norm2.bias', 'layers.2.blocks.17.mlp.fc1.weight', 'layers.2.blocks.17.mlp.fc1.bias', 'layers.2.blocks.17.mlp.fc2.weight', 'layers.2.blocks.17.mlp.fc2.bias', 'layers.2.downsample.reduction.weight', 'layers.2.downsample.norm.weight', 'layers.2.downsample.norm.bias', 'layers.3.blocks.0.norm1.weight', 'layers.3.blocks.0.norm1.bias', 'layers.3.blocks.0.attn.relative_position_bias_table', 'layers.3.blocks.0.attn.relative_position_index', 'layers.3.blocks.0.attn.qkv.weight', 'layers.3.blocks.0.attn.qkv.bias', 'layers.3.blocks.0.attn.proj.weight', 'layers.3.blocks.0.attn.proj.bias', 'layers.3.blocks.0.norm2.weight', 'layers.3.blocks.0.norm2.bias', 'layers.3.blocks.0.mlp.fc1.weight', 'layers.3.blocks.0.mlp.fc1.bias', 'layers.3.blocks.0.mlp.fc2.weight', 'layers.3.blocks.0.mlp.fc2.bias', 'layers.3.blocks.1.norm1.weight', 'layers.3.blocks.1.norm1.bias', 'layers.3.blocks.1.attn.relative_position_bias_table', 'layers.3.blocks.1.attn.relative_position_index', 'layers.3.blocks.1.attn.qkv.weight', 'layers.3.blocks.1.attn.qkv.bias', 'layers.3.blocks.1.attn.proj.weight', 'layers.3.blocks.1.attn.proj.bias', 'layers.3.blocks.1.norm2.weight', 'layers.3.blocks.1.norm2.bias', 'layers.3.blocks.1.mlp.fc1.weight', 'layers.3.blocks.1.mlp.fc1.bias', 'layers.3.blocks.1.mlp.fc2.weight', 'layers.3.blocks.1.mlp.fc2.bias', 'norm.weight', 'norm.bias'], unexpected_keys=['encoder.mask_token', 'encoder.patch_embed.proj.weight', 'encoder.patch_embed.proj.bias', 'encoder.patch_embed.norm.weight', 'encoder.patch_embed.norm.bias', 'encoder.layers.0.blocks.0.norm1.weight', 'encoder.layers.0.blocks.0.norm1.bias', 'encoder.layers.0.blocks.0.attn.relative_position_bias_table', 'encoder.layers.0.blocks.0.attn.relative_position_index', 'encoder.layers.0.blocks.0.attn.qkv.weight', 'encoder.layers.0.blocks.0.attn.qkv.bias', 'encoder.layers.0.blocks.0.attn.proj.weight', 'encoder.layers.0.blocks.0.attn.proj.bias', 'encoder.layers.0.blocks.0.norm2.weight', 'encoder.layers.0.blocks.0.norm2.bias', 'encoder.layers.0.blocks.0.mlp.fc1.weight', 'encoder.layers.0.blocks.0.mlp.fc1.bias', 'encoder.layers.0.blocks.0.mlp.fc2.weight', 'encoder.layers.0.blocks.0.mlp.fc2.bias', 'encoder.layers.0.blocks.1.attn_mask', 'encoder.layers.0.blocks.1.norm1.weight', 'encoder.layers.0.blocks.1.norm1.bias', 'encoder.layers.0.blocks.1.attn.relative_position_bias_table', 'encoder.layers.0.blocks.1.attn.relative_position_index', 'encoder.layers.0.blocks.1.attn.qkv.weight', 'encoder.layers.0.blocks.1.attn.qkv.bias', 'encoder.layers.0.blocks.1.attn.proj.weight', 'encoder.layers.0.blocks.1.attn.proj.bias', 'encoder.layers.0.blocks.1.norm2.weight', 'encoder.layers.0.blocks.1.norm2.bias', 'encoder.layers.0.blocks.1.mlp.fc1.weight', 'encoder.layers.0.blocks.1.mlp.fc1.bias', 'encoder.layers.0.blocks.1.mlp.fc2.weight', 'encoder.layers.0.blocks.1.mlp.fc2.bias', 'encoder.layers.0.downsample.reduction.weight', 'encoder.layers.0.downsample.norm.weight', 'encoder.layers.0.downsample.norm.bias', 'encoder.layers.1.blocks.0.norm1.weight', 'encoder.layers.1.blocks.0.norm1.bias', 'encoder.layers.1.blocks.0.attn.relative_position_bias_table', 'encoder.layers.1.blocks.0.attn.relative_position_index', 'encoder.layers.1.blocks.0.attn.qkv.weight', 'encoder.layers.1.blocks.0.attn.qkv.bias', 'encoder.layers.1.blocks.0.attn.proj.weight', 'encoder.layers.1.blocks.0.attn.proj.bias', 'encoder.layers.1.blocks.0.norm2.weight', 'encoder.layers.1.blocks.0.norm2.bias', 'encoder.layers.1.blocks.0.mlp.fc1.weight', 'encoder.layers.1.blocks.0.mlp.fc1.bias', 'encoder.layers.1.blocks.0.mlp.fc2.weight', 'encoder.layers.1.blocks.0.mlp.fc2.bias', 'encoder.layers.1.blocks.1.attn_mask', 'encoder.layers.1.blocks.1.norm1.weight', 'encoder.layers.1.blocks.1.norm1.bias', 'encoder.layers.1.blocks.1.attn.relative_position_bias_table', 'encoder.layers.1.blocks.1.attn.relative_position_index', 'encoder.layers.1.blocks.1.attn.qkv.weight', 'encoder.layers.1.blocks.1.attn.qkv.bias', 'encoder.layers.1.blocks.1.attn.proj.weight', 'encoder.layers.1.blocks.1.attn.proj.bias', 'encoder.layers.1.blocks.1.norm2.weight', 'encoder.layers.1.blocks.1.norm2.bias', 'encoder.layers.1.blocks.1.mlp.fc1.weight', 'encoder.layers.1.blocks.1.mlp.fc1.bias', 'encoder.layers.1.blocks.1.mlp.fc2.weight', 'encoder.layers.1.blocks.1.mlp.fc2.bias', 'encoder.layers.1.downsample.reduction.weight', 'encoder.layers.1.downsample.norm.weight', 'encoder.layers.1.downsample.norm.bias', 'encoder.layers.2.blocks.0.norm1.weight', 'encoder.layers.2.blocks.0.norm1.bias', 'encoder.layers.2.blocks.0.attn.relative_position_bias_table', 'encoder.layers.2.blocks.0.attn.relative_position_index', 'encoder.layers.2.blocks.0.attn.qkv.weight', 'encoder.layers.2.blocks.0.attn.qkv.bias', 'encoder.layers.2.blocks.0.attn.proj.weight', 'encoder.layers.2.blocks.0.attn.proj.bias', 'encoder.layers.2.blocks.0.norm2.weight', 'encoder.layers.2.blocks.0.norm2.bias', 'encoder.layers.2.blocks.0.mlp.fc1.weight', 'encoder.layers.2.blocks.0.mlp.fc1.bias', 'encoder.layers.2.blocks.0.mlp.fc2.weight', 'encoder.layers.2.blocks.0.mlp.fc2.bias', 'encoder.layers.2.blocks.1.norm1.weight', 'encoder.layers.2.blocks.1.norm1.bias', 'encoder.layers.2.blocks.1.attn.relative_position_bias_table', 'encoder.layers.2.blocks.1.attn.relative_position_index', 'encoder.layers.2.blocks.1.attn.qkv.weight', 'encoder.layers.2.blocks.1.attn.qkv.bias', 'encoder.layers.2.blocks.1.attn.proj.weight', 'encoder.layers.2.blocks.1.attn.proj.bias', 'encoder.layers.2.blocks.1.norm2.weight', 'encoder.layers.2.blocks.1.norm2.bias', 'encoder.layers.2.blocks.1.mlp.fc1.weight', 'encoder.layers.2.blocks.1.mlp.fc1.bias', 'encoder.layers.2.blocks.1.mlp.fc2.weight', 'encoder.layers.2.blocks.1.mlp.fc2.bias', 'encoder.layers.2.blocks.2.norm1.weight', 'encoder.layers.2.blocks.2.norm1.bias', 'encoder.layers.2.blocks.2.attn.relative_position_bias_table', 'encoder.layers.2.blocks.2.attn.relative_position_index', 'encoder.layers.2.blocks.2.attn.qkv.weight', 'encoder.layers.2.blocks.2.attn.qkv.bias', 'encoder.layers.2.blocks.2.attn.proj.weight', 'encoder.layers.2.blocks.2.attn.proj.bias', 'encoder.layers.2.blocks.2.norm2.weight', 'encoder.layers.2.blocks.2.norm2.bias', 'encoder.layers.2.blocks.2.mlp.fc1.weight', 'encoder.layers.2.blocks.2.mlp.fc1.bias', 'encoder.layers.2.blocks.2.mlp.fc2.weight', 'encoder.layers.2.blocks.2.mlp.fc2.bias', 'encoder.layers.2.blocks.3.norm1.weight', 'encoder.layers.2.blocks.3.norm1.bias', 'encoder.layers.2.blocks.3.attn.relative_position_bias_table', 'encoder.layers.2.blocks.3.attn.relative_position_index', 'encoder.layers.2.blocks.3.attn.qkv.weight', 'encoder.layers.2.blocks.3.attn.qkv.bias', 'encoder.layers.2.blocks.3.attn.proj.weight', 'encoder.layers.2.blocks.3.attn.proj.bias', 'encoder.layers.2.blocks.3.norm2.weight', 'encoder.layers.2.blocks.3.norm2.bias', 'encoder.layers.2.blocks.3.mlp.fc1.weight', 'encoder.layers.2.blocks.3.mlp.fc1.bias', 'encoder.layers.2.blocks.3.mlp.fc2.weight', 'encoder.layers.2.blocks.3.mlp.fc2.bias', 'encoder.layers.2.blocks.4.norm1.weight', 'encoder.layers.2.blocks.4.norm1.bias', 'encoder.layers.2.blocks.4.attn.relative_position_bias_table', 'encoder.layers.2.blocks.4.attn.relative_position_index', 'encoder.layers.2.blocks.4.attn.qkv.weight', 'encoder.layers.2.blocks.4.attn.qkv.bias', 'encoder.layers.2.blocks.4.attn.proj.weight', 'encoder.layers.2.blocks.4.attn.proj.bias', 'encoder.layers.2.blocks.4.norm2.weight', 'encoder.layers.2.blocks.4.norm2.bias', 'encoder.layers.2.blocks.4.mlp.fc1.weight', 'encoder.layers.2.blocks.4.mlp.fc1.bias', 'encoder.layers.2.blocks.4.mlp.fc2.weight', 'encoder.layers.2.blocks.4.mlp.fc2.bias', 'encoder.layers.2.blocks.5.norm1.weight', 'encoder.layers.2.blocks.5.norm1.bias', 'encoder.layers.2.blocks.5.attn.relative_position_bias_table', 'encoder.layers.2.blocks.5.attn.relative_position_index', 'encoder.layers.2.blocks.5.attn.qkv.weight', 'encoder.layers.2.blocks.5.attn.qkv.bias', 'encoder.layers.2.blocks.5.attn.proj.weight', 'encoder.layers.2.blocks.5.attn.proj.bias', 'encoder.layers.2.blocks.5.norm2.weight', 'encoder.layers.2.blocks.5.norm2.bias', 'encoder.layers.2.blocks.5.mlp.fc1.weight', 'encoder.layers.2.blocks.5.mlp.fc1.bias', 'encoder.layers.2.blocks.5.mlp.fc2.weight', 'encoder.layers.2.blocks.5.mlp.fc2.bias', 'encoder.layers.2.blocks.6.norm1.weight', 'encoder.layers.2.blocks.6.norm1.bias', 'encoder.layers.2.blocks.6.attn.relative_position_bias_table', 'encoder.layers.2.blocks.6.attn.relative_position_index', 'encoder.layers.2.blocks.6.attn.qkv.weight', 'encoder.layers.2.blocks.6.attn.qkv.bias', 'encoder.layers.2.blocks.6.attn.proj.weight', 'encoder.layers.2.blocks.6.attn.proj.bias', 'encoder.layers.2.blocks.6.norm2.weight', 'encoder.layers.2.blocks.6.norm2.bias', 'encoder.layers.2.blocks.6.mlp.fc1.weight', 'encoder.layers.2.blocks.6.mlp.fc1.bias', 'encoder.layers.2.blocks.6.mlp.fc2.weight', 'encoder.layers.2.blocks.6.mlp.fc2.bias', 'encoder.layers.2.blocks.7.norm1.weight', 'encoder.layers.2.blocks.7.norm1.bias', 'encoder.layers.2.blocks.7.attn.relative_position_bias_table', 'encoder.layers.2.blocks.7.attn.relative_position_index', 'encoder.layers.2.blocks.7.attn.qkv.weight', 'encoder.layers.2.blocks.7.attn.qkv.bias', 'encoder.layers.2.blocks.7.attn.proj.weight', 'encoder.layers.2.blocks.7.attn.proj.bias', 'encoder.layers.2.blocks.7.norm2.weight', 'encoder.layers.2.blocks.7.norm2.bias', 'encoder.layers.2.blocks.7.mlp.fc1.weight', 'encoder.layers.2.blocks.7.mlp.fc1.bias', 'encoder.layers.2.blocks.7.mlp.fc2.weight', 'encoder.layers.2.blocks.7.mlp.fc2.bias', 'encoder.layers.2.blocks.8.norm1.weight', 'encoder.layers.2.blocks.8.norm1.bias', 'encoder.layers.2.blocks.8.attn.relative_position_bias_table', 'encoder.layers.2.blocks.8.attn.relative_position_index', 'encoder.layers.2.blocks.8.attn.qkv.weight', 'encoder.layers.2.blocks.8.attn.qkv.bias', 'encoder.layers.2.blocks.8.attn.proj.weight', 'encoder.layers.2.blocks.8.attn.proj.bias', 'encoder.layers.2.blocks.8.norm2.weight', 'encoder.layers.2.blocks.8.norm2.bias', 'encoder.layers.2.blocks.8.mlp.fc1.weight', 'encoder.layers.2.blocks.8.mlp.fc1.bias', 'encoder.layers.2.blocks.8.mlp.fc2.weight', 'encoder.layers.2.blocks.8.mlp.fc2.bias', 'encoder.layers.2.blocks.9.norm1.weight', 'encoder.layers.2.blocks.9.norm1.bias', 'encoder.layers.2.blocks.9.attn.relative_position_bias_table', 'encoder.layers.2.blocks.9.attn.relative_position_index', 'encoder.layers.2.blocks.9.attn.qkv.weight', 'encoder.layers.2.blocks.9.attn.qkv.bias', 'encoder.layers.2.blocks.9.attn.proj.weight', 'encoder.layers.2.blocks.9.attn.proj.bias', 'encoder.layers.2.blocks.9.norm2.weight', 'encoder.layers.2.blocks.9.norm2.bias', 'encoder.layers.2.blocks.9.mlp.fc1.weight', 'encoder.layers.2.blocks.9.mlp.fc1.bias', 'encoder.layers.2.blocks.9.mlp.fc2.weight', 'encoder.layers.2.blocks.9.mlp.fc2.bias', 'encoder.layers.2.blocks.10.norm1.weight', 'encoder.layers.2.blocks.10.norm1.bias', 'encoder.layers.2.blocks.10.attn.relative_position_bias_table', 'encoder.layers.2.blocks.10.attn.relative_position_index', 'encoder.layers.2.blocks.10.attn.qkv.weight', 'encoder.layers.2.blocks.10.attn.qkv.bias', 'encoder.layers.2.blocks.10.attn.proj.weight', 'encoder.layers.2.blocks.10.attn.proj.bias', 'encoder.layers.2.blocks.10.norm2.weight', 'encoder.layers.2.blocks.10.norm2.bias', 'encoder.layers.2.blocks.10.mlp.fc1.weight', 'encoder.layers.2.blocks.10.mlp.fc1.bias', 'encoder.layers.2.blocks.10.mlp.fc2.weight', 'encoder.layers.2.blocks.10.mlp.fc2.bias', 'encoder.layers.2.blocks.11.norm1.weight', 'encoder.layers.2.blocks.11.norm1.bias', 'encoder.layers.2.blocks.11.attn.relative_position_bias_table', 'encoder.layers.2.blocks.11.attn.relative_position_index', 'encoder.layers.2.blocks.11.attn.qkv.weight', 'encoder.layers.2.blocks.11.attn.qkv.bias', 'encoder.layers.2.blocks.11.attn.proj.weight', 'encoder.layers.2.blocks.11.attn.proj.bias', 'encoder.layers.2.blocks.11.norm2.weight', 'encoder.layers.2.blocks.11.norm2.bias', 'encoder.layers.2.blocks.11.mlp.fc1.weight', 'encoder.layers.2.blocks.11.mlp.fc1.bias', 'encoder.layers.2.blocks.11.mlp.fc2.weight', 'encoder.layers.2.blocks.11.mlp.fc2.bias', 'encoder.layers.2.blocks.12.norm1.weight', 'encoder.layers.2.blocks.12.norm1.bias', 'encoder.layers.2.blocks.12.attn.relative_position_bias_table', 'encoder.layers.2.blocks.12.attn.relative_position_index', 'encoder.layers.2.blocks.12.attn.qkv.weight', 'encoder.layers.2.blocks.12.attn.qkv.bias', 'encoder.layers.2.blocks.12.attn.proj.weight', 'encoder.layers.2.blocks.12.attn.proj.bias', 'encoder.layers.2.blocks.12.norm2.weight', 'encoder.layers.2.blocks.12.norm2.bias', 'encoder.layers.2.blocks.12.mlp.fc1.weight', 'encoder.layers.2.blocks.12.mlp.fc1.bias', 'encoder.layers.2.blocks.12.mlp.fc2.weight', 'encoder.layers.2.blocks.12.mlp.fc2.bias', 'encoder.layers.2.blocks.13.norm1.weight', 'encoder.layers.2.blocks.13.norm1.bias', 'encoder.layers.2.blocks.13.attn.relative_position_bias_table', 'encoder.layers.2.blocks.13.attn.relative_position_index', 'encoder.layers.2.blocks.13.attn.qkv.weight', 'encoder.layers.2.blocks.13.attn.qkv.bias', 'encoder.layers.2.blocks.13.attn.proj.weight', 'encoder.layers.2.blocks.13.attn.proj.bias', 'encoder.layers.2.blocks.13.norm2.weight', 'encoder.layers.2.blocks.13.norm2.bias', 'encoder.layers.2.blocks.13.mlp.fc1.weight', 'encoder.layers.2.blocks.13.mlp.fc1.bias', 'encoder.layers.2.blocks.13.mlp.fc2.weight', 'encoder.layers.2.blocks.13.mlp.fc2.bias', 'encoder.layers.2.blocks.14.norm1.weight', 'encoder.layers.2.blocks.14.norm1.bias', 'encoder.layers.2.blocks.14.attn.relative_position_bias_table', 'encoder.layers.2.blocks.14.attn.relative_position_index', 'encoder.layers.2.blocks.14.attn.qkv.weight', 'encoder.layers.2.blocks.14.attn.qkv.bias', 'encoder.layers.2.blocks.14.attn.proj.weight', 'encoder.layers.2.blocks.14.attn.proj.bias', 'encoder.layers.2.blocks.14.norm2.weight', 'encoder.layers.2.blocks.14.norm2.bias', 'encoder.layers.2.blocks.14.mlp.fc1.weight', 'encoder.layers.2.blocks.14.mlp.fc1.bias', 'encoder.layers.2.blocks.14.mlp.fc2.weight', 'encoder.layers.2.blocks.14.mlp.fc2.bias', 'encoder.layers.2.blocks.15.norm1.weight', 'encoder.layers.2.blocks.15.norm1.bias', 'encoder.layers.2.blocks.15.attn.relative_position_bias_table', 'encoder.layers.2.blocks.15.attn.relative_position_index', 'encoder.layers.2.blocks.15.attn.qkv.weight', 'encoder.layers.2.blocks.15.attn.qkv.bias', 'encoder.layers.2.blocks.15.attn.proj.weight', 'encoder.layers.2.blocks.15.attn.proj.bias', 'encoder.layers.2.blocks.15.norm2.weight', 'encoder.layers.2.blocks.15.norm2.bias', 'encoder.layers.2.blocks.15.mlp.fc1.weight', 'encoder.layers.2.blocks.15.mlp.fc1.bias', 'encoder.layers.2.blocks.15.mlp.fc2.weight', 'encoder.layers.2.blocks.15.mlp.fc2.bias', 'encoder.layers.2.blocks.16.norm1.weight', 'encoder.layers.2.blocks.16.norm1.bias', 'encoder.layers.2.blocks.16.attn.relative_position_bias_table', 'encoder.layers.2.blocks.16.attn.relative_position_index', 'encoder.layers.2.blocks.16.attn.qkv.weight', 'encoder.layers.2.blocks.16.attn.qkv.bias', 'encoder.layers.2.blocks.16.attn.proj.weight', 'encoder.layers.2.blocks.16.attn.proj.bias', 'encoder.layers.2.blocks.16.norm2.weight', 'encoder.layers.2.blocks.16.norm2.bias', 'encoder.layers.2.blocks.16.mlp.fc1.weight', 'encoder.layers.2.blocks.16.mlp.fc1.bias', 'encoder.layers.2.blocks.16.mlp.fc2.weight', 'encoder.layers.2.blocks.16.mlp.fc2.bias', 'encoder.layers.2.blocks.17.norm1.weight', 'encoder.layers.2.blocks.17.norm1.bias', 'encoder.layers.2.blocks.17.attn.relative_position_bias_table', 'encoder.layers.2.blocks.17.attn.relative_position_index', 'encoder.layers.2.blocks.17.attn.qkv.weight', 'encoder.layers.2.blocks.17.attn.qkv.bias', 'encoder.layers.2.blocks.17.attn.proj.weight', 'encoder.layers.2.blocks.17.attn.proj.bias', 'encoder.layers.2.blocks.17.norm2.weight', 'encoder.layers.2.blocks.17.norm2.bias', 'encoder.layers.2.blocks.17.mlp.fc1.weight', 'encoder.layers.2.blocks.17.mlp.fc1.bias', 'encoder.layers.2.blocks.17.mlp.fc2.weight', 'encoder.layers.2.blocks.17.mlp.fc2.bias', 'encoder.layers.2.downsample.reduction.weight', 'encoder.layers.2.downsample.norm.weight', 'encoder.layers.2.downsample.norm.bias', 'encoder.layers.3.blocks.0.norm1.weight', 'encoder.layers.3.blocks.0.norm1.bias', 'encoder.layers.3.blocks.0.attn.relative_position_bias_table', 'encoder.layers.3.blocks.0.attn.relative_position_index', 'encoder.layers.3.blocks.0.attn.qkv.weight', 'encoder.layers.3.blocks.0.attn.qkv.bias', 'encoder.layers.3.blocks.0.attn.proj.weight', 'encoder.layers.3.blocks.0.attn.proj.bias', 'encoder.layers.3.blocks.0.norm2.weight', 'encoder.layers.3.blocks.0.norm2.bias', 'encoder.layers.3.blocks.0.mlp.fc1.weight', 'encoder.layers.3.blocks.0.mlp.fc1.bias', 'encoder.layers.3.blocks.0.mlp.fc2.weight', 'encoder.layers.3.blocks.0.mlp.fc2.bias', 'encoder.layers.3.blocks.1.norm1.weight', 'encoder.layers.3.blocks.1.norm1.bias', 'encoder.layers.3.blocks.1.attn.relative_position_bias_table', 'encoder.layers.3.blocks.1.attn.relative_position_index', 'encoder.layers.3.blocks.1.attn.qkv.weight', 'encoder.layers.3.blocks.1.attn.qkv.bias', 'encoder.layers.3.blocks.1.attn.proj.weight', 'encoder.layers.3.blocks.1.attn.proj.bias', 'encoder.layers.3.blocks.1.norm2.weight', 'encoder.layers.3.blocks.1.norm2.bias', 'encoder.layers.3.blocks.1.mlp.fc1.weight', 'encoder.layers.3.blocks.1.mlp.fc1.bias', 'encoder.layers.3.blocks.1.mlp.fc2.weight', 'encoder.layers.3.blocks.1.mlp.fc2.bias', 'encoder.norm.weight', 'encoder.norm.bias', 'decoder.0.weight', 'decoder.0.bias'])
+[2023-06-24 15:05:01 SL-DDBD] (main.py 269): INFO Test: [0/61]	Time 1.289 (1.289)	Loss 3.8555 (3.8555)	Acc@1 0.000 (0.000)	Acc@5 3.125 (3.125)	Mem 1476MB
+[2023-06-24 15:05:07 SL-DDBD] (main.py 275): INFO  * Acc@1 10.363 Acc@5 48.446
+[2023-06-24 15:05:07 SL-DDBD] (main.py 120): INFO Accuracy of the network on the 1930 test images: 10.4%
+[2023-06-24 15:05:07 SL-DDBD] (main.py 130): INFO Start training
+[2023-06-24 15:05:07 SL-DDBD] (main.py 153): INFO Current learning rate for different parameter groups: [1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08, 1.5625e-08]
