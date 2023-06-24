@@ -17,7 +17,7 @@ More detailed can be found in our [arxiv](https://arxiv.org/ftp/arxiv/papers/230
 In this work, four models were compared for their performance over different epochs. Improved+DA exhibited the fastest convergence and the highest accuracy at each epoch, achieving 78% accuracy by the 10th epoch and a final accuracy of 99.60%. Conversely, the ViT model, despite fast convergence, only managed a final accuracy of 74.35%. The Improved model consistently surpassed the baseline, underscoring the benefits of optimization.
 
 <div align="center">
-    <img acdm.jpg" height="500px" />
+    <img acdm.png" height="500px" />
 </div>
 
 To investigate the advancement of self-supervised learning based on masked image modeling, we visualize the self-supervised learning model and the supervised learning model.The self-supervised model's attention is focused on the key parts of the scene objects and has a better grasp of the feature information, avoiding the problem of feature redundancy and excessive computational costs.
