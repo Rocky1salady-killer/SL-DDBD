@@ -40,7 +40,7 @@ To investigate the advancement of self-supervised learning based on masked image
  The requirements are listed in the `requirement.txt` file. To create your own environment, an example is:
 
 ```bash
-pip install -r requirement.txt
+pip install -r requirements.txt
 cd apex
 pip install -v --disable-pip-version-check --no-cache-dir ./
 cd ..
