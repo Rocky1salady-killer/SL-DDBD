@@ -40,6 +40,7 @@ To investigate the advancement of self-supervised learning based on masked image
  The requirements are listed in the `requirement.txt` file. To create your own environment, an example is:
 
 ```bash
+pip install torchvision==0.8.2 torchaudio==0.7.2 install timm==0.4.9 opencv-python==4.4.0.46 termcolor==1.1.0 yacs==0.1.8 diffdist  
 pip install -r requirements.txt
 cd apex
 pip install -v --disable-pip-version-check --no-cache-dir ./
