@@ -1,6 +1,6 @@
 # SL-DDBD
 
-### SL-DDBD: A Novel Driver Distraction Behavior Detection Based on Self-Supervised Learning Framework with Masked Image Modeling
+### SL-DDBD: A Novel Driver Distraction Behavior Detection Method Based on Self-supervised Learning with Masked Image Modeling
 
 
 
