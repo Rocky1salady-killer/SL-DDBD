@@ -90,10 +90,11 @@ If you are interested in this work, please cite the following work:
 
 ```
 @article{zhang2023novel,
-  title={A Novel Driver Distraction Behavior Detection Based on Self-Supervised Learning Framework with Masked Image Modeling},
+  title={A Novel Driver Distraction Behavior Detection Method Based on Self-Supervised Learning With Masked Image Modeling},
   author={Zhang, Yingzhi and Li, Taiguo and Li, Chao and Zhou, Xinghong},
-  journal={arXiv preprint arXiv:2306.00543},
-  year={2023}
+  journal={IEEE Internet of Things Journal},
+  year={2023},
+  publisher={IEEE}
 }
 ```
 
