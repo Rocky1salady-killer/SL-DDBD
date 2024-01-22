@@ -34,7 +34,7 @@ To investigate the advancement of self-supervised learning based on masked image
 
 | name | pre-train epochs | pre-train resolution | fine-tune resolution | acc@1 | pre-trained model |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| SwinMIM-Large | 800 | 224x224 | 224x224 | 85.4 | [google](https://drive.google.com/file/d/1DCELfGormJK0xbMU2A-mvBWZStSbDUfd/view?usp=sharing)/[config](configs/MIM_finetune__swin_large__img224_window14__800ep.yaml) | 
+| SwinMIM-Large | 800 | 224x224 | 224x224 | 85.4 | [google](https://drive.google.com/file/d/1DCELfGormJK0xbMU2A-mvBWZStSbDUfdd/view?usp=sharing)/[config](configs/MIM_finetune__swin_large__img224_window14__800ep.yaml) | 
 ## Installation
 
  The requirements are listed in the `requirement.txt` file. To create your own environment, an example is:
@@ -56,7 +56,7 @@ This work used the State Farm dataset which can be downloaded from this [Kaggle 
 ```bash
 python main.py  --cfg configs/SLDDBD_patchsize32_swin_ratio0.5_img224_statefarm_110ep.yaml --pretrained SLDDBD_patchsize32_swin_ratio0.5_img224_statefarm_110ep.pth --data-path dataset --local_rank 0 --batch-size 32
 ```
- New training using the MIM pretrained model:, an example is:
+ New training using the MIM pretrained model, an example is:
 
 ```bash
 python main.py  --cfg configs/MIM_finetune__swin_large__img224_window14__800ep.yaml --pretrained MIM_finetune__swin_large__img224_window14__800ep.pth --data-path dataset --local_rank 0 --batch-size 32
